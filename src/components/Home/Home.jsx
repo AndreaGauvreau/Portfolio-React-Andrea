@@ -1,6 +1,6 @@
 import {Flex, Heading} from '@chakra-ui/react'
 import React from 'react'
-import CardsPP from './3drocket/cardsPP'
+import Canvas3d from './3drocket/Canva'
 import Prenom from './Prenom'
 
 export default function Home() {
@@ -13,6 +13,8 @@ export default function Home() {
       flexDirection={'column'}
       justifyContent={'center'}
       alignItems={'center'}
+      bgImage={'./images/path-background.svg'}
+      bgSize="cover"
     >
       <Flex w={'1024px'}>
         <Flex
@@ -21,7 +23,7 @@ export default function Home() {
           justifyContent={'center'}
           h={'50vh'}
         >
-          <CardsPP />
+          <Canvas3d />
         </Flex>
         <Flex w={'50%'} alignItems="center" justifyContent={'center'}>
           <Prenom />

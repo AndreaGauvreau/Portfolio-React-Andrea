@@ -10,17 +10,14 @@ export default function CardsPP() {
     <>
       <Center>
         <Float>
-          <mesh geometry={nodes.ailes003.geometry} rotation={[6, 1, 0]}>
+          <mesh
+            geometry={nodes.ailes003.geometry}
+            rotation={[0.1, 5.3, 0.4]}
+            position={nodes.ailes003.position}
+          >
             <meshBasicMaterial map={bakedTexture} />
           </mesh>
         </Float>
-        <Sparkles
-          size={6}
-          scale={[4, 10, 10]}
-          position-y={1}
-          speed={0.32}
-          count={70}
-        />
       </Center>
     </>
   )

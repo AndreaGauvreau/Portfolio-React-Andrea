@@ -1,7 +1,14 @@
-import {OrbitControls, PresentationControls, Sparkles} from '@react-three/drei'
+import {
+  Center,
+  OrbitControls,
+  PresentationControls,
+  Sparkles,
+} from '@react-three/drei'
 import {Canvas} from '@react-three/fiber'
 import {Perf} from 'r3f-perf'
-import CardsPP from './cardsPP'
+import Boite from './Boite'
+import CardsPP from './Boite'
+import Fusee from './Fusee'
 
 export default function Canvas3d() {
   return (
@@ -11,8 +18,8 @@ export default function Canvas3d() {
         camera={{
           fov: 45,
           near: 0.1,
-          far: 120,
-          position: [1, 2, 6],
+          far: 200,
+          position: [0, 1, 10],
         }}
       >
         <Perf position="top-left" />
@@ -28,7 +35,10 @@ export default function Canvas3d() {
           azimuth={[0, Math.PI / 5]} // Horizontal limits
           config={{mass: 1, tension: 170, friction: 26}} // Spring config
         >
-          <CardsPP />
+          <Center>
+            <Boite />
+            <Fusee />
+          </Center>
         </PresentationControls>
         <Sparkles
           size={6}

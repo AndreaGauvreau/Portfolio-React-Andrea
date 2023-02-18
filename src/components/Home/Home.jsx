@@ -15,6 +15,7 @@ export default function Home() {
       alignItems={'center'}
       bgImage={'./images/path-background.svg'}
       bgSize="cover"
+      boxSizing="border-box"
     >
       <Flex w={'1024px'}>
         <Flex

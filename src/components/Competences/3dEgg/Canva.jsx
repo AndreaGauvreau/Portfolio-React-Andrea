@@ -1,9 +1,13 @@
-import {OrbitControls, PresentationControls, Sparkles} from '@react-three/drei'
+import {Center, OrbitControls, PresentationControls} from '@react-three/drei'
 import {Canvas} from '@react-three/fiber'
 import {Perf} from 'r3f-perf'
-import CardsPP from './cardsPP'
+import ChargeStation from './ChargeStation'
+import Egg from './Egg'
+import LeftLight from './LightLeft'
+import MiddleLight from './LightMiddle'
+import RightLight from './LightRight'
 
-export default function Canvas3d() {
+export default function CanvasEgg() {
   return (
     <>
       <Canvas
@@ -11,7 +15,7 @@ export default function Canvas3d() {
         camera={{
           fov: 45,
           near: 0.1,
-          far: 120,
+          far: 50,
           position: [1, 2, 6],
         }}
       >
@@ -28,15 +32,14 @@ export default function Canvas3d() {
           azimuth={[0, Math.PI / 5]} // Horizontal limits
           config={{mass: 1, tension: 170, friction: 26}} // Spring config
         >
-          <CardsPP />
+          <Center>
+            <Egg />
+            <ChargeStation />
+            <LeftLight />
+            <RightLight />
+            <MiddleLight />
+          </Center>
         </PresentationControls>
-        <Sparkles
-          size={6}
-          scale={[4, 10, 10]}
-          position-y={1}
-          speed={0.32}
-          count={70}
-        />
       </Canvas>
     </>
   )

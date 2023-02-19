@@ -7,6 +7,8 @@ import {sendToVercelAnalytics} from './vitals'
 import {ChakraProvider, extendTheme} from '@chakra-ui/react'
 
 const theme = extendTheme({
+  initialColorMode: 'dark',
+  useSystemColorMode: false,
   colors: {
     dew: {
       100: '#40FC79',

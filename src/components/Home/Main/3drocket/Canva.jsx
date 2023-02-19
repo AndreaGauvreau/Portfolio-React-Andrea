@@ -22,7 +22,6 @@ export default function Canvas3d() {
           position: [0, 1, 10],
         }}
       >
-        <Perf position="top-left" />
         <PresentationControls
           enabled={true} // the controls can be disabled by setting this to false
           global={false} // Spin globally or by dragging the model

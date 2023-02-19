@@ -14,6 +14,9 @@ export default function ButtonDD({text, link, colorThemeDD}) {
     } else if (colorThemeDD === 'green') {
       setColor(colorsDD.bgcolor)
       setBgColor(colorsDD.green)
+    } else if (colorThemeDD === 'light') {
+      setColor(colorsDD.bgcolor)
+      setBgColor('white')
     } else {
       setColor('white')
       setBgColor('gray')

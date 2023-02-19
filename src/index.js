@@ -5,32 +5,31 @@ import {createRoot} from 'react-dom/client'
 import reportWebVitals from './reportWebVitals'
 import {sendToVercelAnalytics} from './vitals'
 import {ChakraProvider, extendTheme} from '@chakra-ui/react'
+import {colorsDD} from './components/ui/colors/colors'
 
 const theme = extendTheme({
-  initialColorMode: 'dark',
-  useSystemColorMode: false,
   colors: {
     dew: {
-      100: '#40FC79',
-      200: '#40FC79',
-      300: '#40FC79',
-      400: '#40FC79',
-      500: '#40FC79',
-      600: '#40FC79',
-      700: '#40FC79',
-      800: '#40FC79',
-      900: '#40FC79',
+      100: colorsDD.green20,
+      200: colorsDD.green20,
+      300: colorsDD.green20,
+      400: colorsDD.green20,
+      500: colorsDD.green20,
+      600: colorsDD.green,
+      700: colorsDD.green,
+      800: colorsDD.green,
+      900: colorsDD.green,
     },
     dd: {
-      100: '#FF47D2',
-      200: '#FF47D250',
-      300: '#FF47D2',
-      400: '#FF47D2',
-      500: '#FF47D2',
-      600: '#FF47D2',
-      700: '#FF47D2',
-      800: '#FF47D2',
-      900: '#FF47D2',
+      100: colorsDD.pink20,
+      200: colorsDD.pink20,
+      300: colorsDD.pink20,
+      400: colorsDD.pink20,
+      500: colorsDD.pink20,
+      600: colorsDD.pink,
+      700: colorsDD.pink,
+      800: colorsDD.pink,
+      900: colorsDD.pink,
     },
   },
   components: {

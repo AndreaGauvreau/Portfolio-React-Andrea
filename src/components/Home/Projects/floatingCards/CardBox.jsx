@@ -17,6 +17,7 @@ import {ViewIcon, LinkIcon, StarIcon} from '@chakra-ui/icons'
 
 import {useState} from 'react'
 import {useEffect} from 'react'
+import {colorsDD} from '../../../ui/colors/colors'
 
 export default function Cards({datas, currentIndex, length}) {
   const [pos, setPos] = useState('-50%')
@@ -96,6 +97,8 @@ export default function Cards({datas, currentIndex, length}) {
         transformOrigin="center"
         zIndex={index}
         opacity={opcaticy}
+        bgColor={colorsDD.bgcolor2}
+        color={'white'}
       >
         <CardBody padding={3}>
           <Box
@@ -130,14 +133,14 @@ export default function Cards({datas, currentIndex, length}) {
               size={'lg'}
               variant={'ghost'}
               colorScheme="white"
-              bgColor={'#00000010'}
+              bgColor={'#ffffff10'}
               aria-label="Search database"
               fontSize={'20px'}
               icon={<ViewIcon />}
             />
             <IconButton
               size={'lg'}
-              bgColor={'#00000010'}
+              bgColor={'#ffffff10'}
               variant={'ghost'}
               colorScheme="white"
               aria-label="Search database"
@@ -146,7 +149,7 @@ export default function Cards({datas, currentIndex, length}) {
             />
             <IconButton
               size={'lg'}
-              bgColor={'#00000010'}
+              bgColor={'#ffffff10'}
               variant={'ghost'}
               colorScheme="white"
               aria-label="Search database"

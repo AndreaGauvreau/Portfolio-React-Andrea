@@ -1,6 +1,7 @@
 import {ArrowBackIcon, ArrowForwardIcon} from '@chakra-ui/icons'
 import {Flex, IconButton} from '@chakra-ui/react'
 import React, {useState, useCallback, useEffect} from 'react'
+import {colorsDD} from '../../../ui/colors/colors'
 import Cards from './CardBox'
 import sports from './FakeData'
 
@@ -45,7 +46,13 @@ export default function CardMap() {
   }, [previousSport, nextSport])
 
   return (
-    <Flex flexDirection={'column'} minH={'100vh'} position="relative">
+    <Flex
+      flexDirection={'column'}
+      h={{base: '50vh', md: '70vh', lg: '70vh'}}
+      position="relative"
+      justifyContent={'center'}
+      alignItems={'center'}
+    >
       <Flex position={'relative'}>
         {sports.map((sport, index) => (
           <Cards
@@ -58,18 +65,32 @@ export default function CardMap() {
       </Flex>
       <IconButton
         position={'absolute'}
-        colorScheme="dd"
+        bgColor={{
+          base: colorsDD.pink,
+          md: colorsDD.pink,
+          lg: colorsDD.pink20,
+        }}
+        _hover={{bgColor: colorsDD.pink}}
+        color="white"
         aria-label="Previous"
         onClick={previousSport}
         icon={<ArrowBackIcon />}
-        top={'50vh'}
-        left={'10%'}
+        top={{base: '25vh', md: '35vh', lg: '35vh'}}
+        left={'10px'}
+        zIndex={'10'}
       />
       <IconButton
         position={'absolute'}
-        right={'10%'}
-        top={'50vh'}
-        colorScheme="dd"
+        bgColor={{
+          base: colorsDD.pink,
+          md: colorsDD.pink,
+          lg: colorsDD.pink20,
+        }}
+        _hover={{bgColor: colorsDD.pink}}
+        right={'10px'}
+        top={{base: '25vh', md: '35vh', lg: '35vh'}}
+        zIndex={'10'}
+        color="white"
         aria-label="Next"
         onClick={nextSport}
         icon={<ArrowForwardIcon />}

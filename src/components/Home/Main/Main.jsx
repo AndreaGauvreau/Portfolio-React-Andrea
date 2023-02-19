@@ -9,7 +9,7 @@ export default function Main() {
       h="100vh"
       w="100%"
       m="0"
-      p="0"
+      p={{base: '20px', md: '10px', lg: '0px'}}
       flexDirection={'column'}
       justifyContent={'center'}
       alignItems={'center'}
@@ -17,21 +17,33 @@ export default function Main() {
       bgSize="cover"
       boxSizing="border-box"
     >
-      <Flex w={'1024px'}>
+      <Flex
+        w={{base: '100%', md: '100%', lg: '1024px'}}
+        flexDirection={{base: 'column', md: 'column', lg: 'row'}}
+      >
         <Flex
-          w={'50%'}
+          w={{base: '100%', md: '100%', lg: '50%'}}
           alignItems="center"
           justifyContent={'center'}
           h={'50vh'}
         >
           <Canvas3d />
         </Flex>
-        <Flex w={'50%'} alignItems="center" justifyContent={'center'}>
+        <Flex
+          w={{base: '100%', md: '100%', lg: '50%'}}
+          alignItems="center"
+          justifyContent={'center'}
+        >
           <Prenom />
         </Flex>
       </Flex>
-      <Heading variant={'dew'} fontSize={'25px'} color={'white'}>
-        Votre développeur Front-end qui va propulser 🚀 votre projet{' '}
+      <Heading
+        variant={'dew'}
+        fontSize={{base: '17px', md: '20px', lg: '30px'}}
+        textAlign={'center'}
+        color={'white'}
+      >
+        Votre développeur Front-end qui va propulser 🚀 votre projet
       </Heading>
     </Flex>
   )

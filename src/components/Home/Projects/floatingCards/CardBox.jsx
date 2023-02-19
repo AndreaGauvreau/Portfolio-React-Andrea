@@ -25,6 +25,7 @@ export default function Cards({datas, currentIndex, length}) {
   const [transform, setTransform] = useState(0)
   const [scale, setScale] = useState(1)
   const [opcaticy, setOpacity] = useState(1)
+  const [blur, setBlur] = useState('0px')
 
   useEffect(() => {
     const diff = Math.abs(currentIndex - datas.id)
@@ -35,6 +36,7 @@ export default function Cards({datas, currentIndex, length}) {
       setTransform(0)
       setScale(1)
       setOpacity(1)
+      setBlur('0px')
     } else {
       const diff = datas.id - currentIndex
       if (diff === 1) {
@@ -43,42 +45,49 @@ export default function Cards({datas, currentIndex, length}) {
         setTransform(-10)
         setScale(0.8)
         setOpacity(0.7)
+        setBlur('4px')
       } else if (diff === -1) {
         setPos('0%')
         setIndex(4)
         setTransform(10)
         setScale(0.8)
         setOpacity(0.7)
+        setBlur('4px')
       } else if (diff === 2) {
         setPos('-150%')
         setIndex(3)
         setTransform(-20)
         setScale(0.4)
         setOpacity(0.2)
+        setBlur('30px')
       } else if (diff === -2) {
         setPos('50%')
         setIndex(3)
         setTransform(20)
         setScale(0.4)
         setOpacity(0.2)
+        setBlur('30px')
       } else if (diff === length) {
         setPos('-50%')
         setIndex(5)
         setTransform(0)
         setScale(1)
         setOpacity(1)
+        setBlur('0px')
       } else if (diff === length - 1) {
         setPos('0%')
         setIndex(4)
         setTransform(10)
         setScale(0.8)
         setOpacity(0.7)
+        setBlur('20px')
       } else if (diff === length - 2) {
         setPos('50%')
         setIndex(3)
         setTransform(20)
         setScale(0.4)
         setOpacity(0.2)
+        setBlur('20px')
       } else {
         setScale(0)
       }
@@ -88,24 +97,55 @@ export default function Cards({datas, currentIndex, length}) {
     <>
       <Card
         maxW="sm"
-        w={'350px'}
+        w={{base: '250px', md: '250px', lg: '350px'}}
         position={'absolute'}
         top={'50%'}
         left={'50%'}
-        transform={`translate(${pos},20%) rotate(${transform}deg) scale(${scale})`}
+        transform={`translate(${pos},-50%) rotate(${transform}deg) scale(${scale})`}
         transition={'0.5s ease'}
         transformOrigin="center"
         zIndex={index}
         opacity={opcaticy}
         bgColor={colorsDD.bgcolor2}
         color={'white'}
+        filter={`blur(${blur})`}
       >
+        <Flex position={'absolute'} top={'20px'} right={'20px'} gap={2}>
+          <IconButton
+            size={{base: 'sm', md: 'lg', lg: 'lg'}}
+            variant={'ghost'}
+            colorScheme="white"
+            bgColor={'#ffffff10'}
+            aria-label="Search database"
+            fontSize={{base: '10px', md: '20px', lg: '20px'}}
+            icon={<ViewIcon />}
+          />
+          <IconButton
+            size={{base: 'sm', md: 'lg', lg: 'lg'}}
+            bgColor={'#ffffff10'}
+            variant={'ghost'}
+            colorScheme="white"
+            aria-label="Search database"
+            fontSize={{base: '10px', md: '20px', lg: '20px'}}
+            icon={<LinkIcon />}
+          />
+          <IconButton
+            size={{base: 'sm', md: 'lg', lg: 'lg'}}
+            bgColor={'#ffffff10'}
+            variant={'ghost'}
+            colorScheme="white"
+            aria-label="Search database"
+            fontSize={{base: '10px', md: '20px', lg: '20px'}}
+            icon={<StarIcon />}
+          />
+        </Flex>
         <CardBody padding={3}>
           <Box
             bgImage={datas?.image}
             w="100%"
-            height={'250px'}
+            h={{base: '150px', md: '150px', lg: '250px'}}
             bgSize="cover"
+            bgPosition={'center'}
             borderRadius={10}
           />
 
@@ -113,52 +153,25 @@ export default function Cards({datas, currentIndex, length}) {
             <Heading
               variant="dew"
               fontFamily={'bely-display, sans-serif'}
-              size="md"
+              size={{base: 'sm', md: 'md', lg: 'xl'}}
             >
               {datas?.title}
             </Heading>
-            <Text>{datas?.description}</Text>
-            <HStack spacing={4}>
+            <Text fontSize={{base: 'xs', md: 'sm', lg: 'lg'}}>
+              {datas?.description}
+            </Text>
+            <Flex gap={2} wrap={'wrap'}>
               {datas.categories.map(name => (
                 <Tag key={name} variant="subtle" colorScheme="dew">
-                  <TagLabel>{name}</TagLabel>
+                  <TagLabel fontSize={{base: 'xs', md: 'sm', lg: 'md'}}>
+                    {name}
+                  </TagLabel>
                 </Tag>
               ))}
-            </HStack>
+            </Flex>
           </Stack>
         </CardBody>
-        <CardFooter>
-          <Flex justifyContent={'space-around'} w="100%">
-            <IconButton
-              size={'lg'}
-              variant={'ghost'}
-              colorScheme="white"
-              bgColor={'#ffffff10'}
-              aria-label="Search database"
-              fontSize={'20px'}
-              icon={<ViewIcon />}
-            />
-            <IconButton
-              size={'lg'}
-              bgColor={'#ffffff10'}
-              variant={'ghost'}
-              colorScheme="white"
-              aria-label="Search database"
-              fontSize={'20px'}
-              icon={<LinkIcon />}
-            />
-            <IconButton
-              size={'lg'}
-              bgColor={'#ffffff10'}
-              variant={'ghost'}
-              colorScheme="white"
-              aria-label="Search database"
-              fontSize={'20px'}
-              icon={<StarIcon />}
-            />
-          </Flex>
-        </CardFooter>
-      </Card>{' '}
+      </Card>
     </>
   )
 }

@@ -5,7 +5,13 @@ import {colorsDD} from '../../ui/colors/colors'
 
 export default function Contact() {
   return (
-    <Flex h="100vh" justifyContent={'center'} alignItems={'center'} w={'100%'}>
+    <Flex
+      h="100vh"
+      justifyContent={'center'}
+      alignItems={'center'}
+      w={'100%'}
+      position={'relative'}
+    >
       <Flex w={'1024px'} h={'80%'}>
         <Flex w="50%">
           <Box

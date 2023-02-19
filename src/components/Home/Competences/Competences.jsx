@@ -1,5 +1,6 @@
 import {Badge, Box, Flex, Heading, Image, Text} from '@chakra-ui/react'
 import React from 'react'
+import {colorsDD} from '../../ui/colors/colors'
 import CanvasEgg from './3dEgg/Canva'
 
 export default function Competences() {
@@ -25,32 +26,32 @@ export default function Competences() {
         </Box>
         <Flex gap={1}>
           <Badge
-            background={'#40FC7920'}
-            color={'#40FC79'}
+            background={colorsDD.green20}
+            color={colorsDD.green}
             padding={1}
             borderRadius={5}
           >
             Developpeur frontend
           </Badge>
           <Badge
-            background={'#FC3FFB20'}
-            color={'#FC3FFB'}
+            background={colorsDD.pink20}
+            color={colorsDD.pink}
             padding={1}
             borderRadius={5}
           >
             React
           </Badge>
           <Badge
-            background={'#FC3FFB20'}
-            color={'#FC3FFB'}
+            background={colorsDD.pink20}
+            color={colorsDD.pink}
             padding={1}
             borderRadius={5}
           >
             Next
           </Badge>
           <Badge
-            background={'#FC3FFB20'}
-            color={'#FC3FFB'}
+            background={colorsDD.pink20}
+            color={colorsDD.pink}
             padding={1}
             borderRadius={5}
           >

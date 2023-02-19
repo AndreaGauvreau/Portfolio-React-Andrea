@@ -1,5 +1,6 @@
 import {Badge, Flex, Heading} from '@chakra-ui/react'
 import React from 'react'
+import {colorsDD} from '../../ui/colors/colors'
 
 export default function Prenom() {
   return (
@@ -12,7 +13,7 @@ export default function Prenom() {
         size={'3xl'}
         textAlign="center"
         fontFamily={'dunkel-sans-glatt, sans-serif'}
-        color={'#40FC79'}
+        color={colorsDD.green}
       >
         andréa
       </Heading>
@@ -27,32 +28,32 @@ export default function Prenom() {
       </Heading>
       <Flex gap={1}>
         <Badge
-          background={'#40FC7920'}
-          color={'#40FC79'}
+          background={colorsDD.green20}
+          color={colorsDD.green}
           padding={1}
           borderRadius={5}
         >
           Developpeur frontend
         </Badge>
         <Badge
-          background={'#FC3FFB20'}
-          color={'#FC3FFB'}
+          background={colorsDD.pink20}
+          color={colorsDD.pink}
           padding={1}
           borderRadius={5}
         >
           React
         </Badge>
         <Badge
-          background={'#FC3FFB20'}
-          color={'#FC3FFB'}
+          background={colorsDD.pink20}
+          color={colorsDD.pink}
           padding={1}
           borderRadius={5}
         >
           Next
         </Badge>
         <Badge
-          background={'#FC3FFB20'}
-          color={'#FC3FFB'}
+          background={colorsDD.pink20}
+          color={colorsDD.pink}
           padding={1}
           borderRadius={5}
         >

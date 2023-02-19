@@ -30,7 +30,7 @@ export default function Main() {
           <Prenom />
         </Flex>
       </Flex>
-      <Heading variant={'dew'} fontSize={'25px'}>
+      <Heading variant={'dew'} fontSize={'25px'} color={'white'}>
         Votre développeur Front-end qui va propulser 🚀 votre projet{' '}
       </Heading>
     </Flex>

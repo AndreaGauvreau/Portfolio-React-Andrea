@@ -2,7 +2,7 @@ import {Box} from '@chakra-ui/react'
 import React from 'react'
 import Main from './Main/Main'
 import Competences from './Competences/Competences'
-import CardMap from './Main/floatingCards/CardsContent'
+import CardMap from '../Home/Projects/floatingCards/CardsContent'
 import Menu from './Menu/Menu'
 import Contact from './Contact/Contact'
 

@@ -23,40 +23,21 @@ export default function Prenom() {
         size={'3xl'}
         fontFamily={'dunkel-sans-glatt, sans-serif'}
         textAlign="center"
+        color={'white'}
       >
         Gauvreau
       </Heading>
       <Flex gap={1}>
-        <Badge
-          background={colorsDD.green20}
-          color={colorsDD.green}
-          padding={1}
-          borderRadius={5}
-        >
+        <Badge colorScheme={'dew'} padding={1} borderRadius={5}>
           Developpeur frontend
         </Badge>
-        <Badge
-          background={colorsDD.pink20}
-          color={colorsDD.pink}
-          padding={1}
-          borderRadius={5}
-        >
+        <Badge colorScheme={'dd'} padding={1} borderRadius={5}>
           React
         </Badge>
-        <Badge
-          background={colorsDD.pink20}
-          color={colorsDD.pink}
-          padding={1}
-          borderRadius={5}
-        >
+        <Badge colorScheme={'dd'} padding={1} borderRadius={5}>
           Next
         </Badge>
-        <Badge
-          background={colorsDD.pink20}
-          color={colorsDD.pink}
-          padding={1}
-          borderRadius={5}
-        >
+        <Badge colorScheme={'dd'} padding={1} borderRadius={5}>
           Three...
         </Badge>
       </Flex>

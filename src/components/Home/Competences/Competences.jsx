@@ -14,31 +14,21 @@ export default function Competences() {
       gap={20}
     >
       <Flex w="500px" flexDirection={'column'} gap={10} position="relative">
-        <Heading variant={'dd'}>
+        <Heading variant={'dd'} color={'white'}>
           Mes compétences pour vous aider à faire éclore votre projet
         </Heading>
         <Box p={5} borderRadius={20} bg={'#ffffff20'}>
-          <Text>
+          <Text color={'white'}>
             Mes compétences de frontend développeur vont <br></br>transformer
             vos idées en réalisations <br></br> solides et concrètes pour
             propulser <br></br> votre projet au sommet !
           </Text>
         </Box>
         <Flex gap={1}>
-          <Badge
-            background={colorsDD.green20}
-            color={colorsDD.green}
-            padding={1}
-            borderRadius={5}
-          >
+          <Badge colorScheme={'dew'} padding={1} borderRadius={5}>
             Developpeur frontend
           </Badge>
-          <Badge
-            background={colorsDD.pink20}
-            color={colorsDD.pink}
-            padding={1}
-            borderRadius={5}
-          >
+          <Badge colorScheme={'dd'} padding={1} borderRadius={5}>
             React
           </Badge>
           <Badge
@@ -49,12 +39,7 @@ export default function Competences() {
           >
             Next
           </Badge>
-          <Badge
-            background={colorsDD.pink20}
-            color={colorsDD.pink}
-            padding={1}
-            borderRadius={5}
-          >
+          <Badge colorScheme={'dd'} padding={1} borderRadius={5}>
             Three...
           </Badge>
         </Flex>

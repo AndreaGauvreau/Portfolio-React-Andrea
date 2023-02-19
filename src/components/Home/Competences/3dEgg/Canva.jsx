@@ -19,7 +19,6 @@ export default function CanvasEgg() {
           position: [1, 2, 6],
         }}
       >
-        <Perf position="top-left" />
         <PresentationControls
           enabled={true} // the controls can be disabled by setting this to false
           global={false} // Spin globally or by dragging the model

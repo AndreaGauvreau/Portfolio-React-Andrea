@@ -1,10 +1,10 @@
 import './App.css'
-import Main from './components/Home/Main'
+import Home from './components/Home/Home'
 
 function App() {
   return (
     <>
-      <Main />
+      <Home />
     </>
   )
 }

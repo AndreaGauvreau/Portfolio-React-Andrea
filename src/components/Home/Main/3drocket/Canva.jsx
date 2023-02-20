@@ -19,7 +19,7 @@ export default function Canvas3d() {
           fov: 45,
           near: 0.1,
           far: 200,
-          position: [0, 1, 10],
+          position: [0, 1, 5],
         }}
       >
         <PresentationControls
@@ -30,8 +30,8 @@ export default function Canvas3d() {
           speed={1} // Speed factor
           zoom={1} // Zoom factor when half the polar-max is reached
           rotation={[0, 0, 0]} // Default rotation
-          polar={[0, Math.PI / 5]} // Vertical limits
-          azimuth={[0, Math.PI / 5]} // Horizontal limits
+          polar={[0, Math.PI / 7]} // Vertical limits
+          azimuth={[0, Math.PI / 2]} // Horizontal limits
           config={{mass: 1, tension: 170, friction: 26}} // Spring config
         >
           <Center>
@@ -40,8 +40,8 @@ export default function Canvas3d() {
           </Center>
         </PresentationControls>
         <Sparkles
-          size={6}
-          scale={[4, 10, 10]}
+          size={3}
+          scale={[4, 4, 4]}
           position-y={1}
           speed={0.32}
           count={70}

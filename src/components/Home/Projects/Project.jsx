@@ -1,6 +1,7 @@
 import {Flex, Heading} from '@chakra-ui/react'
 import React from 'react'
 import ButtonDD from '../../ui/ButtonDD/ButtonDD'
+import {colorsDD} from '../../ui/colors/colors'
 import Gradient from '../../ui/GradientBgElems/Gradient'
 import CardMap from './floatingCards/CardsContent'
 
@@ -23,13 +24,18 @@ export default function Project() {
         flexDirection={{base: 'column', md: 'column', lg: 'column'}}
         gap={5}
       >
-        <Gradient />
-        <Heading variant={'dd'} color={'white'} textAlign="center">
+        <Gradient colorG={colorsDD.pink} versionG={1} />
+        <Heading
+          variant={'dew'}
+          color={'white'}
+          textAlign="center"
+          fontSize={{base: '27px', md: '30px', lg: '40px'}}
+        >
           Projets après Projets
         </Heading>
         <Heading
-          variant={'dew'}
-          fontSize={{base: '13px', md: '15px', lg: '20px'}}
+          variant={'dd'}
+          fontSize={{base: '13px', md: '15px', lg: '18px'}}
           textAlign={'center'}
           color={'white'}
         >

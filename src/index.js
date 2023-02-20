@@ -43,7 +43,7 @@ const theme = extendTheme({
         dd: {
           fontFamily: 'Poppins',
           fontSize: '40px',
-          fontWeight: '800',
+          fontWeight: '600',
         },
       },
     },

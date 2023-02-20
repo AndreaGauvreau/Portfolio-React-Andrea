@@ -1,29 +1,14 @@
-#gradientPink::after {
-  content: '';
+#gradient {
   width: 40vw;
   height: 30vh;
   background: #fc3ffb;
   position: absolute;
-  top: 20%;
-  left: 20%;
-  z-index: 0;
-  filter: blur(130px);
-}
-
-#gradientGreen::after {
-  content: '';
-  width: 40vw;
-  height: 30vh;
-  background: #40fc79;
-  position: absolute;
-  top: 20%;
-  left: 20%;
-  z-index: 0;
+  z-index: 0 !important;
   filter: blur(130px);
 }
 
 @media screen and (max-width: '768px') {
-  #gradientPink::after {
+  #gradient {
     filter: blur(50px);
   }
 }

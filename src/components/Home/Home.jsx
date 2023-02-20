@@ -5,6 +5,7 @@ import Competences from './Competences/Competences'
 import Menu from './Menu/Menu'
 import Contact from './Contact/Contact'
 import Project from './Projects/Project'
+import Parcours from './Parcours/Parcours'
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <Menu />
         <Main />
         <Competences />
+        <Parcours />
         <Project />
         <Contact />
       </Box>

@@ -3,6 +3,7 @@ import React from 'react'
 import Canvas3d from '../Main/3drocket/Canva'
 import ButtonDD from '../../ui/ButtonDD/ButtonDD'
 import {colorsDD} from '../../ui/colors/colors'
+import CanvaHand from './3dHand/CanvaHand'
 
 export default function Contact() {
   return (
@@ -41,8 +42,8 @@ export default function Contact() {
               justifyContent={'center'}
               h={'50vh'}
             >
-              <Canvas3d />
-            </Flex>{' '}
+              <CanvaHand />
+            </Flex>
           </Box>
         </Flex>
         <Flex

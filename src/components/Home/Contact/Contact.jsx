@@ -28,7 +28,13 @@ export default function Contact() {
             borderRadius={20}
             p={10}
           >
-            <Heading>Échangeons autour d'un café</Heading>
+            <Heading
+              variant={'dew'}
+              color={colorsDD.background}
+              fontSize={{base: '27px', md: '30px', lg: '40px'}}
+            >
+              Échangeons autour d'un café
+            </Heading>
             <Flex
               w={'100%'}
               alignItems="center"

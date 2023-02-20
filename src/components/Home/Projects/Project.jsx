@@ -22,7 +22,7 @@ export default function Project() {
       <Flex
         w={{base: '100%', md: '100%', lg: '1024px'}}
         flexDirection={{base: 'column', md: 'column', lg: 'column'}}
-        gap={5}
+        gap={0}
       >
         <Gradient colorG={colorsDD.pink} versionG={1} />
         <Heading
@@ -40,7 +40,7 @@ export default function Project() {
           color={'white'}
         >
           Que de beaux projets ! <br></br>
-          Peut-être serez-vous le prochain ?{' '}
+          Peut-être serez-vous le prochain ?
         </Heading>
         <CardMap />
         <Flex w={'100%'} alignItems="center" justifyContent="center">

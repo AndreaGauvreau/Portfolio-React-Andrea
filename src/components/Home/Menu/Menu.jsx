@@ -1,30 +1,66 @@
-import {EmailIcon, QuestionIcon, UnlockIcon} from '@chakra-ui/icons'
-import {Flex, Icon, IconButton, Image} from '@chakra-ui/react'
+import {Flex, IconButton, Image} from '@chakra-ui/react'
 import React from 'react'
+import {DribbleIcon} from '../../ui/icones/dribbleIcon/dribbleicon'
+import {GithIcon} from '../../ui/icones/githubicon/githubIcon'
+import {LinkdinIcon} from '../../ui/icones/linkedin/linkedinIcon'
 
 export default function Menu() {
   return (
-    <Flex p={5} justifyContent={'space-between'} position={'fixed'} w={'100vw'}>
+    <Flex
+      p={{base: 4, md: 5, lg: 10}}
+      justifyContent={'space-between'}
+      position={'fixed'}
+      w={'100vw'}
+      zIndex={20}
+    >
       <Image
         src={'./images/identite/logo-c-b-600.png'}
-        w={150}
+        w={'auto'}
+        h={{base: '40px', md: '40px', lg: '60px'}}
         alt="logo-andrea-gauvreau"
       />
-      <Flex gap={10} alignItems={'center'}>
+      <Flex gap={{base: 2, md: 5, lg: 10}} alignItems={'center'}>
         <IconButton
           aria-label="github link"
           variant={'ghost'}
-          icon={<UnlockIcon boxSize={6} />}
+          bgColor={'#ffffff00'}
+          _hover={{bgColor: '#ffffff20'}}
+          boxSize={12}
+          icon={
+            <GithIcon
+              color={'#ffffff50'}
+              hoverColor={'#ffffff'}
+              width={'40px'}
+            />
+          }
         />
         <IconButton
           aria-label="github link"
           variant={'ghost'}
-          icon={<EmailIcon boxSize={6} />}
+          boxSize={12}
+          bgColor={'#ffffff00'}
+          _hover={{bgColor: '#ffffff20'}}
+          icon={
+            <LinkdinIcon
+              color={'#ffffff50'}
+              hoverColor={'#ffffff'}
+              width={'35px'}
+            />
+          }
         />
         <IconButton
           aria-label="github link"
           variant={'ghost'}
-          icon={<QuestionIcon boxSize={6} />}
+          boxSize={12}
+          bgColor={'#ffffff00'}
+          _hover={{bgColor: '#ffffff20'}}
+          icon={
+            <DribbleIcon
+              color={'#ffffff50'}
+              hoverColor={'#ffffff'}
+              width={'35px'}
+            />
+          }
         />
       </Flex>
     </Flex>

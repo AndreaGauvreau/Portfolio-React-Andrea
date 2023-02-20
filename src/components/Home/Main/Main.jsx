@@ -19,7 +19,7 @@ export default function Main() {
     >
       <Flex
         w={{base: '100%', md: '100%', lg: '1024px'}}
-        flexDirection={{base: 'column', md: 'column', lg: 'row'}}
+        flexDirection={{base: 'column-reverse', md: 'column', lg: 'row'}}
       >
         <Flex
           w={{base: '100%', md: '100%', lg: '50%'}}

@@ -11,7 +11,7 @@ export default function Competences() {
       w="100%"
       p={10}
       justifyContent="center"
-      alignItems={{base: 'flex-start', md: 'center', lg: 'center'}}
+      alignItems={{base: 'center', md: 'center', lg: 'center'}}
       gap={20}
       position="relative"
     >
@@ -21,11 +21,11 @@ export default function Competences() {
       >
         <Gradient colorG={colorsDD.green} versionG={3} />
         <Flex
-          w={{base: '100%', md: '40%', lg: '40%'}}
+          w={{base: '100%', md: '100%', lg: '40%'}}
           flexDirection={'column'}
-          gap={{base: 0, md: 10, lg: 10}}
+          gap={{base: 0, md: 0, lg: 10}}
           position="relative"
-          justifyContent={{base: 'flex-start', md: 'center', lg: 'center'}}
+          justifyContent={{base: 'flex-start', md: 'flex-start', lg: 'center'}}
         >
           <Heading
             variant={'dew'}
@@ -47,7 +47,7 @@ export default function Competences() {
           >
             <Image
               src="./images/identite/andrea-light-think.png"
-              w={'100%'}
+              w={'50%'}
               zIndex={1}
             />
           </Flex>
@@ -78,7 +78,7 @@ export default function Competences() {
               <CanvasEgg />
             </Box>
           </Box>
-          <Flex gap={1} display={{base: 'none', md: 'flex', lg: 'flex'}}>
+          <Flex gap={1} display={{base: 'none', md: 'none', lg: 'flex'}}>
             <Badge colorScheme={'dd'} padding={1} borderRadius={5}>
               Next
             </Badge>
@@ -99,7 +99,7 @@ export default function Competences() {
           </Flex>
         </Flex>
         <Flex
-          display={{base: 'none', md: 'flex', lg: 'flex'}}
+          display={{base: 'none', md: 'none', lg: 'flex'}}
           w="60%"
           h={'90vh'}
           alignItems={'flex-end'}

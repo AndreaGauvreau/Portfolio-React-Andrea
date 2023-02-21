@@ -21,8 +21,8 @@ export default function CanvasEgg() {
           enabled={true} // the controls can be disabled by setting this to false
           global={false} // Spin globally or by dragging the model
           cursor={true} // Whether to toggle cursor style on drag
-          snap={false} // Snap-back to center (can also be a spring config)
-          speed={1} // Speed factor
+          snap={true} // Snap-back to center (can also be a spring config)
+          speed={0.5} // Speed factor
           zoom={1} // Zoom factor when half the polar-max is reached
           rotation={[0, 0, 0]} // Default rotation
           polar={[0, Math.PI / 7]} // Vertical limits

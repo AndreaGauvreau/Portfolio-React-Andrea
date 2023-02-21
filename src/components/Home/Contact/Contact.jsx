@@ -18,21 +18,24 @@ export default function Contact() {
         w={'1024px'}
         h={'80%'}
         flexDirection={{base: 'column', md: 'row', lg: 'row'}}
-        p={5}
+        p={0}
         gap={10}
       >
-        <Flex w={{base: '100%', md: '50%', lg: '50%'}}>
+        <Flex w={{base: '100%', md: '66%', lg: '66%'}}>
           <Box
             minH={'70vh'}
             w={'100%'}
             bgColor={colorsDD.pink}
             borderRadius={20}
-            p={10}
+            p={0}
           >
             <Heading
               variant={'dew'}
               color={colorsDD.background}
               fontSize={{base: '27px', md: '30px', lg: '40px'}}
+              pt={10}
+              pl={10}
+              pr={10}
             >
               Échangeons autour d'un café
             </Heading>
@@ -40,14 +43,14 @@ export default function Contact() {
               w={'100%'}
               alignItems="center"
               justifyContent={'center'}
-              h={'50vh'}
+              h={'100%'}
             >
               <CanvaHand />
             </Flex>
           </Box>
         </Flex>
         <Flex
-          w={{base: '100%', md: '50%', lg: '50%'}}
+          w={{base: '100%', md: '34%', lg: '34%'}}
           justifyContent={'center'}
           alignItems={'center'}
           flexDirection={'column'}

@@ -17,23 +17,24 @@ export default function Contact() {
     >
       <Flex
         w={'1024px'}
-        h={'80%'}
-        flexDirection={{base: 'column', md: 'row', lg: 'row'}}
+        h={'70%'}
+        flexDirection={{base: 'column', md: 'column', lg: 'row'}}
         p={{base: 5, md: 5, lg: 0}}
         gap={10}
         position="relative"
       >
         <Gradient versionG={1} colorG={'#ffffff20'} />
-        <Flex w={{base: '100%', md: '66%', lg: '66%'}}>
+        <Flex w={{base: '100%', md: '100%', lg: '66%'}}>
           <Box
-            minH={'70vh'}
+            minH={'50vh'}
             w={'100%'}
-            bgColor={colorsDD.pink}
+            background={`linear-gradient(50deg, ${colorsDD.green20} 0%, ${colorsDD.green} 100%)`}
             borderRadius={20}
             p={0}
           >
             <Heading
               variant={'dew'}
+              textAlign="center"
               color={colorsDD.background}
               fontSize={{base: '27px', md: '30px', lg: '40px'}}
               pt={10}
@@ -54,17 +55,18 @@ export default function Contact() {
               votre projet !
             </Heading>
             <Flex
+              mt={'-50px'}
               w={'100%'}
               alignItems="center"
               justifyContent={'center'}
-              h={{base: '50vh', lg: '100%'}}
+              h={{base: '50vh', md: '60vh', lg: '100%'}}
             >
               <CanvaHand />
             </Flex>
           </Box>
         </Flex>
         <Flex
-          w={{base: '100%', md: '34%', lg: '34%'}}
+          w={{base: '100%', md: '100%', lg: '34%'}}
           justifyContent={'center'}
           alignItems={'center'}
           flexDirection={'column'}

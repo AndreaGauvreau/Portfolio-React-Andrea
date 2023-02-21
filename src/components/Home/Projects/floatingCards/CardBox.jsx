@@ -80,7 +80,7 @@ export default function Cards({datas, currentIndex, length}) {
         setTransform(10)
         setScale(0.8)
         setOpacity(0.7)
-        setBlur('20px')
+        setBlur('4px')
       } else if (diff === length - 2) {
         setPos('50%')
         setIndex(3)
@@ -115,15 +115,19 @@ export default function Cards({datas, currentIndex, length}) {
             size={{base: 'sm', md: 'lg', lg: 'lg'}}
             variant={'ghost'}
             colorScheme="white"
-            bgColor={'#ffffff10'}
+            bgColor={'#ffffff20'}
+            _hover={{bgColor: '#ffffff40'}}
+            backdropFilter={'blur( 6px )'}
             aria-label="Search database"
             fontSize={{base: '10px', md: '20px', lg: '20px'}}
             icon={<ViewIcon />}
           />
           <IconButton
             size={{base: 'sm', md: 'lg', lg: 'lg'}}
-            bgColor={'#ffffff10'}
+            bgColor={'#ffffff20'}
+            backdropFilter={'blur( 6px )'}
             variant={'ghost'}
+            _hover={{bgColor: '#ffffff40'}}
             colorScheme="white"
             aria-label="Search database"
             fontSize={{base: '10px', md: '20px', lg: '20px'}}
@@ -131,8 +135,10 @@ export default function Cards({datas, currentIndex, length}) {
           />
           <IconButton
             size={{base: 'sm', md: 'lg', lg: 'lg'}}
-            bgColor={'#ffffff10'}
+            bgColor={'#ffffff20'}
+            backdropFilter={'blur( 6px )'}
             variant={'ghost'}
+            _hover={{bgColor: '#ffffff40'}}
             colorScheme="white"
             aria-label="Search database"
             fontSize={{base: '10px', md: '20px', lg: '20px'}}

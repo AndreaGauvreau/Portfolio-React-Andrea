@@ -44,7 +44,11 @@ export default function Project() {
         </Heading>
         <CardMap />
         <Flex w={'100%'} alignItems="center" justifyContent="center">
-          <ButtonDD text={'Tous les projets'} link="#" colorThemeDD={'pink'} />
+          <ButtonDD
+            text={'Tous les projets'}
+            link="/projets"
+            colorThemeDD={'pink'}
+          />
         </Flex>
       </Flex>
     </Flex>

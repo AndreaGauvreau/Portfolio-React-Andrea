@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import {useEffect} from 'react'
+import {Link} from 'react-router-dom'
 import {colorsDD} from '../colors/colors'
 import './Button.css'
 
@@ -24,15 +25,16 @@ export default function ButtonDD({text, link, colorThemeDD}) {
   }, [colorThemeDD])
 
   return (
-    <a id="linkofbutton" href={link}>
-      <button
+    <div id="linkofbutton">
+      <Link
         id="actionBtn"
         style={{backgroundColor: `${bgColor}`, color: `${color}`}}
+        to={link}
       >
         {text}
-      </button>
+      </Link>
       <div id="btnTopLeft" style={{borderLeftColor: `${bgColor}`}}></div>
       <div id="btnBotRight" style={{borderLeftColor: `${bgColor}`}}></div>
-    </a>
+    </div>
   )
 }

@@ -29,9 +29,9 @@ export default function Canvas3d() {
           snap={true} // Snap-back to center (can also be a spring config)
           speed={1} // Speed factor
           zoom={1} // Zoom factor when half the polar-max is reached
-          rotation={[0, 0, 0]} // Default rotation
+          rotation={[0, 0.3, 0]} // Default rotation
           polar={[0, Math.PI / 7]} // Vertical limits
-          azimuth={[0, Math.PI / 2]} // Horizontal limits
+          azimuth={[-1, Math.PI / 4]} // Horizontal limits
           config={{mass: 1, tension: 170, friction: 26}} // Spring config
         >
           <Center>

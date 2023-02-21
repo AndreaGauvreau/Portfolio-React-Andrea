@@ -1,11 +1,10 @@
-import {Center, OrbitControls, PresentationControls} from '@react-three/drei'
+import {Center, PresentationControls} from '@react-three/drei'
 import {Canvas} from '@react-three/fiber'
-import {Perf} from 'r3f-perf'
 import ChargeStation from './ChargeStation'
 import Egg from './Egg'
 import TopLight from './TopLight'
 
-export default function CanvasEgg() {
+export default function CanvasEgg({hoverEgg}) {
   return (
     <>
       <Canvas
@@ -17,6 +16,7 @@ export default function CanvasEgg() {
           position: [1, 2, 8],
         }}
       >
+        {' '}
         <PresentationControls
           enabled={true} // the controls can be disabled by setting this to false
           global={false} // Spin globally or by dragging the model
@@ -30,7 +30,7 @@ export default function CanvasEgg() {
           config={{mass: 1, tension: 170, friction: 26}} // Spring config
         >
           <Center>
-            <Egg />
+            <Egg hoverEgg={hoverEgg} />
             <ChargeStation />
             <TopLight />
           </Center>

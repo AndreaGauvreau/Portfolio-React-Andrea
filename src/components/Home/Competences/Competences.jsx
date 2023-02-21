@@ -1,10 +1,19 @@
 import {Badge, Box, Flex, Heading, Image, Text} from '@chakra-ui/react'
-import React from 'react'
+import React, {useState} from 'react'
 import {colorsDD} from '../../ui/colors/colors'
 import Gradient from '../../ui/GradientBgElems/Gradient'
 import CanvasEgg from './3dEgg/Canva'
 
 export default function Competences() {
+  const [isHovering, setIsHovering] = useState(false)
+
+  const handleMouseEnter = () => {
+    setIsHovering(true)
+  }
+
+  const handleMouseLeave = () => {
+    setIsHovering(false)
+  }
   return (
     <Flex
       h="90vh"
@@ -33,7 +42,13 @@ export default function Competences() {
             fontSize={{base: '27px', md: '30px', lg: '40px'}}
           >
             Des compétences pour vous aider à faire{' '}
-            <b style={{color: `${colorsDD.pink}`, fontWeight: '400'}}>éclore</b>{' '}
+            <b
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              style={{color: `${colorsDD.pink}`, fontWeight: '400'}}
+            >
+              éclore
+            </b>{' '}
             votre projet
           </Heading>
           <Flex
@@ -75,7 +90,7 @@ export default function Competences() {
               w={{base: '200px', md: '200px', lg: '250px'}}
               h={{base: '200px', md: '200px', lg: '250px'}}
             >
-              <CanvasEgg />
+              <CanvasEgg hoverEgg={isHovering} />
             </Box>
           </Box>
           <Flex gap={1} display={{base: 'none', md: 'none', lg: 'flex'}}>

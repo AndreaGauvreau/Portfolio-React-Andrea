@@ -4,6 +4,7 @@ import Canvas3d from '../Main/3drocket/Canva'
 import ButtonDD from '../../ui/ButtonDD/ButtonDD'
 import {colorsDD} from '../../ui/colors/colors'
 import CanvaHand from './3dHand/CanvaHand'
+import Gradient from '../../ui/GradientBgElems/Gradient'
 
 export default function Contact() {
   return (
@@ -18,9 +19,11 @@ export default function Contact() {
         w={'1024px'}
         h={'80%'}
         flexDirection={{base: 'column', md: 'row', lg: 'row'}}
-        p={0}
+        p={{base: 5, md: 5, lg: 0}}
         gap={10}
+        position="relative"
       >
+        <Gradient versionG={1} colorG={'#ffffff20'} />
         <Flex w={{base: '100%', md: '66%', lg: '66%'}}>
           <Box
             minH={'70vh'}
@@ -39,11 +42,22 @@ export default function Contact() {
             >
               Échangeons autour d'un café
             </Heading>
+            <Heading
+              variant={'dd'}
+              fontSize={{base: '13px', md: '15px', lg: '18px'}}
+              color={colorsDD.background}
+              textAlign="center"
+              pl={5}
+              pr={5}
+            >
+              Et voyons ensemble comment pouvons-bous <br></br>faire évoluer
+              votre projet !
+            </Heading>
             <Flex
               w={'100%'}
               alignItems="center"
               justifyContent={'center'}
-              h={'100%'}
+              h={{base: '50vh', lg: '100%'}}
             >
               <CanvaHand />
             </Flex>

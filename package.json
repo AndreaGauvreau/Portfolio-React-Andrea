@@ -5,6 +5,7 @@
     "@chakra-ui/react": "^2.5.1",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
+    "@loadable/component": "^5.15.3",
     "@react-three/drei": "^9.56.25",
     "@react-three/fiber": "^8.11.2",
     "@testing-library/jest-dom": "^5.16.5",

@@ -1,15 +1,17 @@
 import './App.css'
-import Home from './components/Home/Home'
 import {useState, useEffect} from 'react'
+import loadable from '@loadable/component'
 import Chargement from './components/chargement/Chargement'
+
+const Home = loadable(() => import('./components/Home/Home'), {
+  fallback: <Chargement />,
+})
 
 function App() {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false)
-    }, 2000)
+    setIsLoading(false)
   }, [])
 
   return <>{isLoading ? <Chargement /> : <Home />}</>

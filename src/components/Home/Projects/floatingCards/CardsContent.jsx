@@ -3,38 +3,39 @@ import {Flex, IconButton} from '@chakra-ui/react'
 import React, {useState, useCallback, useEffect} from 'react'
 import {colorsDD} from '../../../ui/colors/colors'
 import Cards from './CardBox'
-import sports from './FakeData'
+import projetsdatas from './FakeData.jsx'
 
 export default function CardMap() {
   const [mainIndex, setMainIndex] = useState(0)
-  const lengthArray = sports.length
+  const lengthArray = projetsdatas.length
 
   const navigateTo = useCallback(
     index => {
-      const currentIndex = sports.findIndex(
-        sport => sport.id === sports[mainIndex].id,
+      const currentIndex = projetsdatas.findIndex(
+        projet => projet.id === projetsdatas[mainIndex].id,
       )
       const diff = index - currentIndex
-      const newIndex = (mainIndex + diff + sports.length) % sports.length
+      const newIndex =
+        (mainIndex + diff + projetsdatas.length) % projetsdatas.length
       setMainIndex(newIndex)
     },
     [mainIndex],
   )
 
-  const previousSport = useCallback(() => {
+  const previousprojet = useCallback(() => {
     navigateTo(mainIndex + 1)
   }, [mainIndex, navigateTo])
 
-  const nextSport = useCallback(() => {
+  const nextprojet = useCallback(() => {
     navigateTo(mainIndex - 1)
   }, [mainIndex, navigateTo])
 
   useEffect(() => {
     const handleKeyDown = event => {
       if (event.key === 'ArrowLeft' || event.key === 'ArrowDown') {
-        previousSport()
+        previousprojet()
       } else if (event.key === 'ArrowRight' || event.key === 'ArrowUp') {
-        nextSport()
+        nextprojet()
       }
     }
 
@@ -43,7 +44,7 @@ export default function CardMap() {
     return () => {
       document.removeEventListener('keydown', handleKeyDown)
     }
-  }, [previousSport, nextSport])
+  }, [previousprojet, nextprojet])
 
   return (
     <Flex
@@ -54,10 +55,10 @@ export default function CardMap() {
       alignItems={'center'}
     >
       <Flex position={'relative'}>
-        {sports.map((sport, index) => (
+        {projetsdatas.map((projet, index) => (
           <Cards
             key={index}
-            datas={sport}
+            datas={projet}
             currentIndex={mainIndex}
             length={lengthArray}
           />
@@ -73,7 +74,7 @@ export default function CardMap() {
         _hover={{bgColor: colorsDD.pink}}
         color="white"
         aria-label="Previous"
-        onClick={previousSport}
+        onClick={previousprojet}
         icon={<ArrowBackIcon />}
         top={{base: '25vh', md: '35vh', lg: '35vh'}}
         left={'10px'}
@@ -92,7 +93,7 @@ export default function CardMap() {
         zIndex={'10'}
         color="white"
         aria-label="Next"
-        onClick={nextSport}
+        onClick={nextprojet}
         icon={<ArrowForwardIcon />}
       />
     </Flex>

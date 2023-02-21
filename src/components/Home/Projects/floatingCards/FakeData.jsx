@@ -1,11 +1,11 @@
-const sports = [
+const projetsdata = [
   {
     id: 1,
     title: 'Teachizi',
     description:
       "j'ai developpé la marketplace teachizi.fr dans le but d'obtenir un espace utilisateur eleve et professeur, possibilité de réserver et payer le cours d'un prof",
     categories: ['CMS', 'Marketplace', 'Mangopay'],
-    image: 'https://i.ytimg.com/vi/DpjXFckjmp8/maxresdefault.jpg',
+    image: '/images/teachizi.fr-portfolio-andrea-gauvreau.jpg',
   },
   {
     id: 2,
@@ -13,8 +13,7 @@ const sports = [
     description:
       "J'ai contribué à l'amélioration de lateamV2, je me suis principalement occupé de divers problème ui/ux, appels API avec react Query",
     categories: ['React', 'React Query', 'Chakra Ui'],
-    image:
-      'https://camo.githubusercontent.com/a8f540f11243d7ecc371e7e8e469f8e139104f25576c1856113ad7d7f1f7346d/68747470733a2f2f6d696b65636f646575722e636f6d2f6d696b652f6173736574732f636f75727365732f72656163742d6d6173746572792d332e706e67',
+    image: '/images/victoria-lopez.fr-portoflio-andrea-gauvreau.jpg',
   },
   {
     id: 3,
@@ -22,7 +21,7 @@ const sports = [
     description:
       "J'ai developpé Formizi qui est une lxp offrant une experience de formation digital innovante.",
     categories: ['CMS', 'LXP', 'LMS'],
-    image: 'https://i.ytimg.com/vi/DpjXFckjmp8/maxresdefault.jpg',
+    image: '/images/teachizi.hu-portfolio-andrea-gauvreau.jpg',
   },
   {
     id: 4,
@@ -30,7 +29,7 @@ const sports = [
     description:
       "j'ai developpé la marketplace teachizi.fr dans le but d'obtenir un espace utilisateur eleve et professeur, possibilité de réserver et payer le cours d'un prof",
     categories: ['CMS', 'Marketplace', 'Mangopay'],
-    image: 'https://i.ytimg.com/vi/DpjXFckjmp8/maxresdefault.jpg',
+    image: '/images/teachizi.fr-portfolio-andrea-gauvreau.jpg',
   },
   {
     id: 5,
@@ -38,8 +37,7 @@ const sports = [
     description:
       "J'ai contribué à l'amélioration de lateamV2, je me suis principalement occupé de divers problème ui/ux, appels API avec react Query",
     categories: ['React', 'React Query', 'Chakra Ui'],
-    image:
-      'https://camo.githubusercontent.com/a8f540f11243d7ecc371e7e8e469f8e139104f25576c1856113ad7d7f1f7346d/68747470733a2f2f6d696b65636f646575722e636f6d2f6d696b652f6173736574732f636f75727365732f72656163742d6d6173746572792d332e706e67',
+    image: '/images/victoria-lopez.fr-portoflio-andrea-gauvreau.jpg',
   },
   {
     id: 6,
@@ -47,7 +45,7 @@ const sports = [
     description:
       "J'ai developpé Formizi qui est une lxp offrant une experience de formation digital innovante.",
     categories: ['CMS', 'LXP', 'LMS'],
-    image: 'https://i.ytimg.com/vi/DpjXFckjmp8/maxresdefault.jpg',
+    image: '/images/teachizi.hu-portfolio-andrea-gauvreau.jpg',
   },
   {
     id: 7,
@@ -55,7 +53,7 @@ const sports = [
     description:
       "j'ai developpé la marketplace teachizi.fr dans le but d'obtenir un espace utilisateur eleve et professeur, possibilité de réserver et payer le cours d'un prof",
     categories: ['CMS', 'Marketplace', 'Mangopay'],
-    image: 'https://i.ytimg.com/vi/DpjXFckjmp8/maxresdefault.jpg',
+    image: '/images/teachizi.fr-portfolio-andrea-gauvreau.jpg',
   },
   {
     id: 8,
@@ -63,8 +61,7 @@ const sports = [
     description:
       "J'ai contribué à l'amélioration de lateamV2, je me suis principalement occupé de divers problème ui/ux, appels API avec react Query",
     categories: ['React', 'React Query', 'Chakra Ui'],
-    image:
-      'https://camo.githubusercontent.com/a8f540f11243d7ecc371e7e8e469f8e139104f25576c1856113ad7d7f1f7346d/68747470733a2f2f6d696b65636f646575722e636f6d2f6d696b652f6173736574732f636f75727365732f72656163742d6d6173746572792d332e706e67',
+    image: '/images/victoria-lopez.fr-portoflio-andrea-gauvreau.jpg',
   },
   {
     id: 9,
@@ -72,8 +69,8 @@ const sports = [
     description:
       "J'ai developpé Formizi qui est une lxp offrant une experience de formation digital innovante.",
     categories: ['CMS', 'LXP', 'LMS'],
-    image: 'https://i.ytimg.com/vi/DpjXFckjmp8/maxresdefault.jpg',
+    image: '/images/teachizi.hu-portfolio-andrea-gauvreau.jpg',
   },
 ]
 
-export default sports
+export default projetsdata

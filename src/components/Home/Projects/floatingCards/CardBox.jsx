@@ -18,6 +18,7 @@ import {ViewIcon, LinkIcon, StarIcon} from '@chakra-ui/icons'
 import {useState} from 'react'
 import {useEffect} from 'react'
 import {colorsDD} from '../../../ui/colors/colors'
+import {Link} from 'react-router-dom'
 
 export default function Cards({datas, currentIndex, length}) {
   const [pos, setPos] = useState('-50%')
@@ -80,7 +81,7 @@ export default function Cards({datas, currentIndex, length}) {
         setTransform(10)
         setScale(0.8)
         setOpacity(0.7)
-        setBlur('20px')
+        setBlur('4px')
       } else if (diff === length - 2) {
         setPos('50%')
         setIndex(3)
@@ -115,29 +116,37 @@ export default function Cards({datas, currentIndex, length}) {
             size={{base: 'sm', md: 'lg', lg: 'lg'}}
             variant={'ghost'}
             colorScheme="white"
-            bgColor={'#ffffff10'}
+            bgColor={'#ffffff20'}
+            _hover={{bgColor: '#ffffff40'}}
+            backdropFilter={'blur( 6px )'}
             aria-label="Search database"
             fontSize={{base: '10px', md: '20px', lg: '20px'}}
             icon={<ViewIcon />}
           />
           <IconButton
             size={{base: 'sm', md: 'lg', lg: 'lg'}}
-            bgColor={'#ffffff10'}
+            bgColor={'#ffffff20'}
+            backdropFilter={'blur( 6px )'}
             variant={'ghost'}
+            _hover={{bgColor: '#ffffff40'}}
             colorScheme="white"
             aria-label="Search database"
             fontSize={{base: '10px', md: '20px', lg: '20px'}}
             icon={<LinkIcon />}
           />
-          <IconButton
-            size={{base: 'sm', md: 'lg', lg: 'lg'}}
-            bgColor={'#ffffff10'}
-            variant={'ghost'}
-            colorScheme="white"
-            aria-label="Search database"
-            fontSize={{base: '10px', md: '20px', lg: '20px'}}
-            icon={<StarIcon />}
-          />
+          <Link to={`/projets/${datas.id}`}>
+            <IconButton
+              size={{base: 'sm', md: 'lg', lg: 'lg'}}
+              bgColor={'#ffffff20'}
+              backdropFilter={'blur( 6px )'}
+              variant={'ghost'}
+              _hover={{bgColor: '#ffffff40'}}
+              colorScheme="white"
+              aria-label="Search database"
+              fontSize={{base: '10px', md: '20px', lg: '20px'}}
+              icon={<StarIcon />}
+            />
+          </Link>
         </Flex>
         <CardBody padding={3}>
           <Box

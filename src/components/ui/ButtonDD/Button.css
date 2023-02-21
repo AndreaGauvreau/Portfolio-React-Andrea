@@ -4,7 +4,8 @@
   border-radius: 50px 0px;
   color: white;
   font-size: 20px;
-  padding: 10px 50px;
+  padding: 15px 50px;
+  margin: 10px;
   font-family: 'bely-display';
   font-size: '40px';
   font-weight: '400';
@@ -32,26 +33,26 @@
 }
 
 #btnTopLeft {
-  top: -15px;
-  left: -15px;
-  transform: rotate(225deg);
+  top: -20px;
+  left: -13px;
+  transform: rotate(220deg);
 }
 
 #btnBotRight {
-  bottom: -15px;
-  right: -15px;
-  transform: rotate(45deg);
+  bottom: -20px;
+  right: -13px;
+  transform: rotate(40deg);
 }
 
 #actionBtn:hover ~ #btnTopLeft {
   top: -0px;
-  left: -27px;
-  transform: rotate(210deg);
+  left: -25px;
+  transform: rotate(205deg);
 }
 #actionBtn:hover ~ #btnBotRight {
   bottom: 0px;
-  right: -27px;
-  transform: rotate(30deg);
+  right: -25px;
+  transform: rotate(25deg);
 }
 
 #actionBtn:focus ~ #btnTopLeft {

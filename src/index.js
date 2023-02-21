@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals'
 import {sendToVercelAnalytics} from './vitals'
 import {ChakraProvider, extendTheme} from '@chakra-ui/react'
 import {colorsDD} from './components/ui/colors/colors'
+import {BrowserRouter} from 'react-router-dom'
 
 const theme = extendTheme({
   colors: {
@@ -52,11 +53,13 @@ const theme = extendTheme({
 const container = document.getElementById('root')
 const root = createRoot(container)
 root.render(
-  <React.StrictMode>
-    <ChakraProvider theme={theme}>
-      <App />
-    </ChakraProvider>
-  </React.StrictMode>,
+  <BrowserRouter>
+    <React.StrictMode>
+      <ChakraProvider theme={theme}>
+        <App />
+      </ChakraProvider>
+    </React.StrictMode>
+  </BrowserRouter>,
 )
 
 reportWebVitals(sendToVercelAnalytics)

@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 import {colorsDD} from '../colors/colors'
 import './Button.css'
 
-export default function ButtonDD({text, link, colorThemeDD}) {
+export default function ButtonDD({text, link, colorThemeDD, indexB}) {
   const [color, setColor] = useState('white')
   const [bgColor, setBgColor] = useState('pink')
 
@@ -25,7 +25,7 @@ export default function ButtonDD({text, link, colorThemeDD}) {
   }, [colorThemeDD])
 
   return (
-    <div id="linkofbutton">
+    <div id="linkofbutton" style={{zIndex: indexB}}>
       <Link
         id="actionBtn"
         style={{backgroundColor: `${bgColor}`, color: `${color}`}}

@@ -2,18 +2,14 @@ import React from 'react'
 import {
   Card,
   CardBody,
-  CardFooter,
   Heading,
   Stack,
   Text,
   Box,
-  HStack,
   TagLabel,
   Tag,
-  IconButton,
   Flex,
 } from '@chakra-ui/react'
-import {ViewIcon, LinkIcon, StarIcon} from '@chakra-ui/icons'
 
 import {useState} from 'react'
 import {useEffect} from 'react'
@@ -28,12 +24,11 @@ export default function Cards({datas, currentIndex, length}) {
   const [opcaticy, setOpacity] = useState(1)
   const [blur, setBlur] = useState('0px')
 
+  const diff = Math.abs(currentIndex - datas.id)
   useEffect(() => {
-    const diff = Math.abs(currentIndex - datas.id)
-
     if (datas.id === currentIndex) {
       setPos('-50%')
-      setIndex(5)
+      setIndex(6)
       setTransform(0)
       setScale(1)
       setOpacity(1)
@@ -94,6 +89,7 @@ export default function Cards({datas, currentIndex, length}) {
       }
     }
   }, [currentIndex, datas.id, length])
+
   return (
     <>
       <Card
@@ -110,54 +106,19 @@ export default function Cards({datas, currentIndex, length}) {
         bgColor={colorsDD.bgcolor2}
         color={'white'}
         filter={`blur(${blur})`}
+        borderRadius={10}
       >
-        <Flex position={'absolute'} top={'20px'} right={'20px'} gap={2}>
-          <IconButton
-            size={{base: 'sm', md: 'lg', lg: 'lg'}}
-            variant={'ghost'}
-            colorScheme="white"
-            bgColor={'#ffffff20'}
-            _hover={{bgColor: '#ffffff40'}}
-            backdropFilter={'blur( 6px )'}
-            aria-label="Search database"
-            fontSize={{base: '10px', md: '20px', lg: '20px'}}
-            icon={<ViewIcon />}
-          />
-          <IconButton
-            size={{base: 'sm', md: 'lg', lg: 'lg'}}
-            bgColor={'#ffffff20'}
-            backdropFilter={'blur( 6px )'}
-            variant={'ghost'}
-            _hover={{bgColor: '#ffffff40'}}
-            colorScheme="white"
-            aria-label="Search database"
-            fontSize={{base: '10px', md: '20px', lg: '20px'}}
-            icon={<LinkIcon />}
-          />
+        <CardBody p={4}>
           <Link to={`/projets/${datas.id}`}>
-            <IconButton
-              size={{base: 'sm', md: 'lg', lg: 'lg'}}
-              bgColor={'#ffffff20'}
-              backdropFilter={'blur( 6px )'}
-              variant={'ghost'}
-              _hover={{bgColor: '#ffffff40'}}
-              colorScheme="white"
-              aria-label="Search database"
-              fontSize={{base: '10px', md: '20px', lg: '20px'}}
-              icon={<StarIcon />}
+            <Box
+              bgImage={datas?.image}
+              w="100%"
+              h={{base: '150px', md: '150px', lg: '250px'}}
+              bgSize="cover"
+              bgPosition={'center'}
+              borderRadius={10}
             />
           </Link>
-        </Flex>
-        <CardBody padding={3}>
-          <Box
-            bgImage={datas?.image}
-            w="100%"
-            h={{base: '150px', md: '150px', lg: '250px'}}
-            bgSize="cover"
-            bgPosition={'center'}
-            borderRadius={10}
-          />
-
           <Stack mt="6" spacing="3">
             <Heading
               variant="dew"

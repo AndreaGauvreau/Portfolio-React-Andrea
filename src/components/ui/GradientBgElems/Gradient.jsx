@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react'
 import {useState} from 'react'
 import './gradient.css'
-export default function Gradient({versionG, colorG}) {
+export default function Gradient({versionG, colorG, indexG}) {
   const [version, setVersion] = useState({
     width: '10vw',
     height: '20vh',
@@ -39,5 +39,10 @@ export default function Gradient({versionG, colorG}) {
     }
   }, [colorG, versionG])
 
-  return <div id="gradient" style={{background: colorG, ...version}}></div>
+  return (
+    <div
+      id="gradient"
+      style={{background: colorG, ...version, zIndex: indexG}}
+    ></div>
+  )
 }

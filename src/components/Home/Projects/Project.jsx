@@ -27,6 +27,7 @@ export default function Project() {
         <Gradient colorG={colorsDD.pink} versionG={1} />
         <Heading
           variant={'dew'}
+          zIndex={10}
           color={'white'}
           textAlign="center"
           fontSize={{base: '27px', md: '30px', lg: '40px'}}
@@ -38,6 +39,7 @@ export default function Project() {
           fontSize={{base: '13px', md: '15px', lg: '18px'}}
           textAlign={'center'}
           color={'white'}
+          zIndex={10}
         >
           Que de beaux projets ! <br></br>
           Peut-être serez-vous le prochain ?
@@ -48,6 +50,7 @@ export default function Project() {
             text={'Tous les projets'}
             link="/projets"
             colorThemeDD={'pink'}
+            indexB={10}
           />
         </Flex>
       </Flex>

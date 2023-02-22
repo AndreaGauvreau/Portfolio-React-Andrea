@@ -1,13 +1,6 @@
-import {
-  Center,
-  OrbitControls,
-  PresentationControls,
-  Sparkles,
-} from '@react-three/drei'
+import {Center, PresentationControls, Sparkles} from '@react-three/drei'
 import {Canvas} from '@react-three/fiber'
-import {Perf} from 'r3f-perf'
 import Boite from './Boite'
-import CardsPP from './Boite'
 import Fusee from './Fusee'
 
 export default function Canvas3d() {
@@ -39,13 +32,6 @@ export default function Canvas3d() {
             <Fusee />
           </Center>
         </PresentationControls>
-        <Sparkles
-          size={3}
-          scale={[4, 4, 4]}
-          position-y={1}
-          speed={0.32}
-          count={70}
-        />
       </Canvas>
     </>
   )

@@ -44,6 +44,13 @@ export default function Cursor() {
       x: cursorData.position.x - 40,
       y: cursorData.position.y - 40,
     },
+    SmFull: {
+      height: 70,
+      width: 70,
+      background: '#ffffff',
+      x: cursorData.position.x - 40,
+      y: cursorData.position.y - 40,
+    },
     SmP: {
       height: 70,
       width: 70,
@@ -72,6 +79,13 @@ export default function Cursor() {
       setCursorData(prevState => ({
         ...prevState,
         variant: 'pos',
+        orientation: 0,
+      }))
+      document.body.style.cursor = 'none'
+    } else if (cursorData.mouseEnter === 'SmFull') {
+      setCursorData(prevState => ({
+        ...prevState,
+        variant: 'SmFull',
         orientation: 0,
       }))
       document.body.style.cursor = 'none'

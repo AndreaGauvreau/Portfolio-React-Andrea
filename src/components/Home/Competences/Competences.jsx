@@ -1,19 +1,32 @@
 import {Badge, Box, Flex, Heading, Image, Text} from '@chakra-ui/react'
-import React, {useState} from 'react'
+import React, {useContext, useState} from 'react'
 import {colorsDD} from '../../ui/colors/colors'
+import {CursorContext} from '../../ui/cursor/CursorProvider'
 import Gradient from '../../ui/GradientBgElems/Gradient'
 import CanvasEgg from './3dEgg/Canva'
 
 export default function Competences() {
   const [isHovering, setIsHovering] = useState(false)
+  const [cursorData, setCursorData] = useContext(CursorContext)
 
   const handleMouseEnter = () => {
     setIsHovering(true)
+    setCursorData(prevState => ({
+      ...prevState,
+      mouseEnter: 'SmP',
+      mouseText: '🐣',
+    }))
   }
 
   const handleMouseLeave = () => {
     setIsHovering(false)
+    setCursorData(prevState => ({
+      ...prevState,
+      mouseEnter: 'default',
+      mouseText: '',
+    }))
   }
+
   return (
     <Flex
       h="90vh"

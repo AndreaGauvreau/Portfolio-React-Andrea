@@ -1,7 +1,9 @@
 import {ArrowBackIcon, ArrowForwardIcon} from '@chakra-ui/icons'
 import {Box, Flex, IconButton} from '@chakra-ui/react'
-import React, {useState, useCallback, useEffect} from 'react'
+import React, {useState, useCallback, useEffect, useContext} from 'react'
 import {colorsDD} from '../../../ui/colors/colors'
+import Cursor from '../../../ui/cursor/Cursor'
+import {CursorContext} from '../../../ui/cursor/CursorProvider'
 import Cards from './CardBox'
 import projetsdatas from './FakeData.jsx'
 
@@ -47,27 +49,55 @@ export default function CardMap() {
     }
   }, [previousprojet, nextprojet])
 
+  const [cursorData, setCursorData] = useContext(CursorContext)
+
+  const handleMouseNext = () => {
+    setCursorData(prevState => ({
+      ...prevState,
+      mouseEnter: 'Sm',
+      mouseText: '👉',
+    }))
+  }
+  const handleMousePrev = () => {
+    setCursorData(prevState => ({
+      ...prevState,
+      mouseEnter: 'Sm',
+      mouseText: '👈',
+    }))
+  }
+  const handleMouseLeave = () => {
+    setCursorData(prevState => ({
+      ...prevState,
+      mouseEnter: 'default',
+      mouseText: '',
+    }))
+  }
+
   return (
     <>
       <Box
         w={'50vw'}
-        h={'100vh'}
+        h={'70vh'}
         position={'absolute'}
         right="0px"
-        top={'0px'}
+        top={'15vh'}
         bgColor={'#ffffff00'}
         onClick={() => nextprojet()}
         zIndex={5}
+        onMouseEnter={handleMouseNext}
+        onMouseLeave={handleMouseLeave}
       ></Box>
       <Box
         w={'50vw'}
-        h={'100vh'}
+        h={'70vh'}
         position={'absolute'}
         left="0px"
-        top={'0px'}
+        top={'15vh'}
         bgColor={'#ffffff00'}
         onClick={() => previousprojet()}
         zIndex={5}
+        onMouseEnter={handleMousePrev}
+        onMouseLeave={handleMouseLeave}
       ></Box>
       <Flex
         flexDirection={'column'}

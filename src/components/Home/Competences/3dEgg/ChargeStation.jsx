@@ -6,7 +6,6 @@ export default function LightLeft() {
   const {nodes} = useGLTF('./model/egg-charge.glb')
   const bakedTexture = useTexture('./model/torus.jpg')
   bakedTexture.flipY = false
-  console.log('testk', nodes)
   const chargeRef = useRef()
 
   useFrame((state, delta) => {

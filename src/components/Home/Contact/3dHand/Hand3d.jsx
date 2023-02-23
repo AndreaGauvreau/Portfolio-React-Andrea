@@ -4,7 +4,6 @@ import {useTexture, useGLTF, ContactShadows, Shadow} from '@react-three/drei'
 export default function Hand3d() {
   const {nodes} = useGLTF('./model/roomcoffee2.glb')
   const bakedTexture = useTexture('./model/room.jpg')
-  console.log('room', nodes)
   bakedTexture.flipY = false
 
   return (

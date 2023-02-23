@@ -40,7 +40,7 @@ export default function Cursor() {
     pos: {
       height: 70,
       width: 70,
-      background: '#ffffff80',
+      background: '#ffffff20',
       x: cursorData.position.x - 40,
       y: cursorData.position.y - 40,
     },
@@ -48,6 +48,13 @@ export default function Cursor() {
       height: 70,
       width: 70,
       background: colorsDD.pink,
+      x: cursorData.position.x - 40,
+      y: cursorData.position.y - 40,
+    },
+    textg: {
+      height: 70,
+      width: 70,
+      background: '#ffffff',
       x: cursorData.position.x - 40,
       y: cursorData.position.y - 40,
     },
@@ -60,18 +67,21 @@ export default function Cursor() {
         variant: 'text',
         orientation: 0,
       }))
+      document.body.style.cursor = 'none'
     } else if (cursorData.mouseEnter === 'Sm') {
       setCursorData(prevState => ({
         ...prevState,
         variant: 'pos',
         orientation: 0,
       }))
+      document.body.style.cursor = 'none'
     } else if (cursorData.mouseEnter === 'SmP') {
       setCursorData(prevState => ({
         ...prevState,
         variant: 'SmP',
         orientation: 0,
       }))
+      document.body.style.cursor = 'none'
     } else {
       setCursorData(prevState => ({
         ...prevState,
@@ -79,10 +89,10 @@ export default function Cursor() {
         text: '',
         orientation: 90,
       }))
+      document.body.style.cursor = 'auto'
     }
-
     setTextCursor(cursorData.mouseText)
-  }, [cursorData.mouseEnter, setCursorData])
+  }, [cursorData.mouseEnter, cursorData.mouseText, setCursorData])
 
   return (
     <motion.div
@@ -90,7 +100,11 @@ export default function Cursor() {
       variants={variants}
       animate={cursorData.variant}
     >
-      <span style={{transform: `rotate(${cursorData.orientation}deg)`}}>
+      <span
+        style={{
+          transform: `rotate(${cursorData.orientation}deg)`,
+        }}
+      >
         {textCursor}
       </span>
     </motion.div>

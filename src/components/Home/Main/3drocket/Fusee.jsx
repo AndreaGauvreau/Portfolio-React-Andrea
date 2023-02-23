@@ -1,11 +1,9 @@
-import {Center, useTexture, useGLTF, Sparkles, Float} from '@react-three/drei'
+import {useTexture, useGLTF, Float} from '@react-three/drei'
 
 export default function Fusee() {
   const {nodes} = useGLTF('./model/fusee.glb')
   const bakedTexture = useTexture('./model/fusee.jpg')
   bakedTexture.flipY = false
-  console.log('fusee', nodes)
-
   return (
     <>
       <Float speed={5}>

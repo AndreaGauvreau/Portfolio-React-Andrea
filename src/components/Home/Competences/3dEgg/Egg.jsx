@@ -1,5 +1,5 @@
 import {useTexture, useGLTF, Float} from '@react-three/drei'
-import {useEffect, useState, useRef} from 'react'
+import {useState, useRef} from 'react'
 import {useFrame} from '@react-three/fiber'
 
 export default function Egg({hoverEgg}) {

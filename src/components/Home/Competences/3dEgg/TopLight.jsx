@@ -4,7 +4,6 @@ export default function TopLight() {
   const {nodes} = useGLTF('./model/top-light.glb')
   const bakedTexture = useTexture('./model/top-light.jpg')
   bakedTexture.flipY = false
-  console.log('toplight', nodes)
 
   return (
     <>

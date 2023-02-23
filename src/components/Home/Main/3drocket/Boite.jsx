@@ -1,18 +1,9 @@
-import {Center, useTexture, useGLTF, Sparkles, Float} from '@react-three/drei'
-import {
-  SSR,
-  DepthOfField,
-  Bloom,
-  Noise,
-  Glitch,
-  Vignette,
-  EffectComposer,
-} from '@react-three/postprocessing'
+import {useTexture, useGLTF, Float} from '@react-three/drei'
+import {Bloom, EffectComposer} from '@react-three/postprocessing'
 export default function Boite() {
   const {nodes} = useGLTF('./model/box.glb')
   const bakedTexture = useTexture('./model/box.jpg')
   bakedTexture.flipY = false
-  console.log('boite', nodes)
 
   return (
     <>

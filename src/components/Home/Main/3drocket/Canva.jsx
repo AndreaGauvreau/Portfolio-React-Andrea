@@ -1,9 +1,28 @@
-import {Center, PresentationControls, Sparkles} from '@react-three/drei'
+import {Center, PresentationControls} from '@react-three/drei'
 import {Canvas} from '@react-three/fiber'
+import {useContext} from 'react'
+import {CursorContext} from '../../../ui/cursor/CursorProvider'
 import Boite from './Boite'
 import Fusee from './Fusee'
 
 export default function Canvas3d() {
+  const [cursorData, setCursorData] = useContext(CursorContext)
+
+  const handleMouseGrab = () => {
+    setCursorData(prevState => ({
+      ...prevState,
+      mouseEnter: 'Sm',
+      mouseText: '🚀',
+    }))
+  }
+
+  const handleMouseLeave = () => {
+    setCursorData(prevState => ({
+      ...prevState,
+      mouseEnter: 'default',
+      mouseText: '',
+    }))
+  }
   return (
     <>
       <Canvas
@@ -14,6 +33,8 @@ export default function Canvas3d() {
           far: 200,
           position: [0, 1, 5],
         }}
+        onMouseEnter={handleMouseGrab}
+        onMouseLeave={handleMouseLeave}
       >
         <PresentationControls
           enabled={true} // the controls can be disabled by setting this to false

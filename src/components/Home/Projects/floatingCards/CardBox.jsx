@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import {
   Card,
   CardBody,
@@ -15,7 +15,7 @@ import {useState} from 'react'
 import {useEffect} from 'react'
 import {colorsDD} from '../../../ui/colors/colors'
 import {Link} from 'react-router-dom'
-
+import {CursorContext} from '../../../ui/cursor/CursorProvider'
 export default function Cards({datas, currentIndex, length}) {
   const [pos, setPos] = useState('-50%')
   const [index, setIndex] = useState(1)
@@ -89,7 +89,23 @@ export default function Cards({datas, currentIndex, length}) {
       }
     }
   }, [currentIndex, datas.id, length])
+  const [cursorData, setCursorData] = useContext(CursorContext)
 
+  const handleMouseClick = () => {
+    setCursorData(prevState => ({
+      ...prevState,
+      mouseEnter: 'Lg',
+      mouseText: '🫵',
+    }))
+  }
+
+  const handleMouseLeave = () => {
+    setCursorData(prevState => ({
+      ...prevState,
+      mouseEnter: 'default',
+      mouseText: '',
+    }))
+  }
   return (
     <>
       <Card
@@ -117,6 +133,9 @@ export default function Cards({datas, currentIndex, length}) {
               bgSize="cover"
               bgPosition={'center'}
               borderRadius={10}
+              onMouseEnter={handleMouseClick}
+              onMouseLeave={handleMouseLeave}
+              onClick={handleMouseLeave}
             />
           </Link>
           <Stack mt="6" spacing="3">

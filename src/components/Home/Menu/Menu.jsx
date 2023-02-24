@@ -1,10 +1,14 @@
 import {Flex, IconButton, Image} from '@chakra-ui/react'
-import React from 'react'
+import React, {useState} from 'react'
+import {colorsDD} from '../../ui/colors/colors'
 import {DribbleIcon} from '../../ui/icones/dribbleIcon/dribbleicon'
 import {GithIcon} from '../../ui/icones/githubicon/githubIcon'
 import {LinkdinIcon} from '../../ui/icones/linkedin/linkedinIcon'
 
-export default function Menu() {
+export default function Menu({color1, color2}) {
+  const [githubColor, setGithubColor] = useState('#ffffff50')
+  const [linkedinColor, setLinkdedinColor] = useState('#ffffff50')
+  const [dribbleColor, setDribbleColor] = useState('#ffffff50')
   return (
     <Flex
       pl={{base: 10, md: 5, lg: 10}}
@@ -29,10 +33,13 @@ export default function Menu() {
           bgColor={'#ffffff00'}
           _hover={{bgColor: '#ffffff20'}}
           boxSize={{base: 8, md: 10, lg: 12}}
+          onMouseEnter={() => setGithubColor('white')}
+          onMouseLeave={() => setGithubColor('#ffffff50')}
           icon={
             <GithIcon
-              color={'#ffffff50'}
-              hoverColor={'#ffffff'}
+              color={githubColor}
+              color1={color1 ? color1 : colorsDD.pink}
+              color2={color2 ? color2 : colorsDD.green}
               width={{base: '20px', md: '30px', lg: '40px'}}
             />
           }
@@ -43,10 +50,13 @@ export default function Menu() {
           boxSize={{base: 8, md: 10, lg: 12}}
           bgColor={'#ffffff00'}
           _hover={{bgColor: '#ffffff20'}}
+          onMouseEnter={() => setLinkdedinColor('white')}
+          onMouseLeave={() => setLinkdedinColor('#ffffff50')}
           icon={
             <LinkdinIcon
-              color={'#ffffff50'}
-              hoverColor={'#ffffff'}
+              color={linkedinColor}
+              color1={color1 ? color1 : colorsDD.pink}
+              color2={color2 ? color2 : colorsDD.green}
               width={{base: '20px', md: '30px', lg: '40px'}}
             />
           }
@@ -57,10 +67,13 @@ export default function Menu() {
           boxSize={{base: 8, md: 10, lg: 12}}
           bgColor={'#ffffff00'}
           _hover={{bgColor: '#ffffff20'}}
+          onMouseEnter={() => setDribbleColor('white')}
+          onMouseLeave={() => setDribbleColor('#ffffff50')}
           icon={
             <DribbleIcon
-              color={'#ffffff50'}
-              hoverColor={'#ffffff'}
+              color={dribbleColor}
+              color1={color1 ? color1 : colorsDD.pink}
+              color2={color2 ? color2 : colorsDD.green}
               width={{base: '20px', md: '30px', lg: '40px'}}
             />
           }

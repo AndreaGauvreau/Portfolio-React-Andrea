@@ -2,6 +2,7 @@ import {useContext, useEffect, useState} from 'react'
 import {motion} from 'framer-motion'
 import {CursorContext} from './CursorProvider'
 import {colorsDD} from '../colors/colors'
+import './cursor.css'
 
 export default function Cursor() {
   const [cursorData, setCursorData] = useContext(CursorContext)
@@ -44,6 +45,13 @@ export default function Cursor() {
       x: cursorData.position.x - 40,
       y: cursorData.position.y - 40,
     },
+    SmFull: {
+      height: 70,
+      width: 70,
+      background: '#ffffff',
+      x: cursorData.position.x - 40,
+      y: cursorData.position.y - 40,
+    },
     SmP: {
       height: 70,
       width: 70,
@@ -75,6 +83,13 @@ export default function Cursor() {
         orientation: 0,
       }))
       document.body.style.cursor = 'none'
+    } else if (cursorData.mouseEnter === 'SmFull') {
+      setCursorData(prevState => ({
+        ...prevState,
+        variant: 'SmFull',
+        orientation: 0,
+      }))
+      document.body.style.cursor = 'none'
     } else if (cursorData.mouseEnter === 'SmP') {
       setCursorData(prevState => ({
         ...prevState,
@@ -99,6 +114,7 @@ export default function Cursor() {
       className="cursor"
       variants={variants}
       animate={cursorData.variant}
+      id="customCursor"
     >
       <span
         style={{

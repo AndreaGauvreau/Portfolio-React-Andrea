@@ -76,10 +76,10 @@ export default function CardMap() {
     <>
       <Box
         w={'50vw'}
-        h={'70vh'}
+        h={'40vh'}
         position={'absolute'}
         right="0px"
-        top={'15vh'}
+        top={'30vh'}
         bgColor={'#ffffff00'}
         onClick={() => nextprojet()}
         zIndex={5}
@@ -88,10 +88,10 @@ export default function CardMap() {
       ></Box>
       <Box
         w={'50vw'}
-        h={'70vh'}
+        h={'40vh'}
         position={'absolute'}
         left="0px"
-        top={'15vh'}
+        top={'30vh'}
         bgColor={'#ffffff00'}
         onClick={() => previousprojet()}
         zIndex={5}

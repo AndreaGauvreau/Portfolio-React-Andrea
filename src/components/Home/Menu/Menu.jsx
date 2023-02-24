@@ -3,7 +3,9 @@ import React, {useState} from 'react'
 import {colorsDD} from '../../ui/colors/colors'
 import {DribbleIcon} from '../../ui/icones/dribbleIcon/dribbleicon'
 import {GithIcon} from '../../ui/icones/githubicon/githubIcon'
+import {IconeAndrea} from '../../ui/icones/iconeandrea/iconeandrea'
 import {LinkdinIcon} from '../../ui/icones/linkedin/linkedinIcon'
+import {LogoAndrea} from '../../ui/icones/logoandrea/logoandrea'
 
 export default function Menu({color1, color2}) {
   const [githubColor, setGithubColor] = useState('#ffffff50')
@@ -20,11 +22,11 @@ export default function Menu({color1, color2}) {
       w={'100vw'}
       zIndex={20}
     >
-      <Image
-        src={'/images/identite/logo-c-b-600.png'}
-        w={'auto'}
-        h={{base: '40px', md: '40px', lg: '60px'}}
-        alt="logo-andrea-gauvreau"
+      <LogoAndrea
+        width={'150px'}
+        color1={color1 ? color1 : colorsDD.pink}
+        color2={color2 ? color2 : colorsDD.green}
+        color={'white'}
       />
       <Flex gap={{base: 2, md: 5, lg: 10}} alignItems={'center'}>
         <IconButton

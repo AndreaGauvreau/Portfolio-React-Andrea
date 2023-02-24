@@ -1,12 +1,16 @@
 import {Box, Flex, Image} from '@chakra-ui/react'
 import React from 'react'
 
-export default function ImageProject({image}) {
+export default function ImageProject({image, scale}) {
+  const widthImage = 100 * scale
+  const heightImage = 80 * scale
+  const heightImageBase = 40 * scale
+  const heightImageMd = 50 * scale
   return (
     <>
       <Flex justifyContent={'center'} alignItems={'center'} w={'100vw'}>
         <Flex
-          w={{base: '90vw', md: '90vw', lg: '1024px'}}
+          w={{base: '90vw', md: '90vw', lg: `1024px`}}
           position="relative"
           justifyContent={'center'}
           alignItems={'center'}
@@ -15,16 +19,17 @@ export default function ImageProject({image}) {
             backgroundImage={`url(${image})`}
             backgroundSize={'cover'}
             backgroundPosition={'center'}
-            w={'calc(100% - 20px)'}
+            w={`calc(${widthImage}% - 20px)`}
             h={{
-              base: 'calc(40vh - 20px)',
-              md: 'calc(50vh - 20px)',
-              lg: 'calc(80vh - 20px)',
+              base: `calc(${heightImageBase}vh - 20px)`,
+              md: `calc(${heightImageMd}vh - 20px)`,
+              lg: `calc(${heightImage}vh - 20px)`,
             }}
             borderRadius={20}
             position="absolute"
-            top={'10px'}
-            left={'10px'}
+            transform={'translate(-50%,-50%'}
+            top={'50%'}
+            left={'50%'}
             filter="blur(10px)"
             p={10}
             zIndex={1}
@@ -33,16 +38,17 @@ export default function ImageProject({image}) {
             backgroundImage={`url(${image})`}
             backgroundSize={'cover'}
             backgroundPosition={'center'}
-            w={'calc(100% - 20px)'}
+            w={`calc(${widthImage}% - 20px)`}
             h={{
-              base: 'calc(40vh - 20px)',
-              md: 'calc(50vh - 20px)',
-              lg: 'calc(80vh - 20px)',
+              base: `calc(${heightImageBase}vh - 20px)`,
+              md: `calc(${heightImageMd}vh - 20px)`,
+              lg: `calc(${heightImage}vh - 20px)`,
             }}
             borderRadius={20}
             position="absolute"
-            top={'10px'}
-            left={'10px'}
+            transform={'translate(-50%,-50%'}
+            top={'50%'}
+            left={'50%'}
             filter="blur(40px)"
             p={10}
             zIndex={1}
@@ -51,31 +57,33 @@ export default function ImageProject({image}) {
             backgroundImage={`url(${image})`}
             backgroundSize={'cover'}
             backgroundPosition={'center'}
-            w={'calc(100% - 20px)'}
+            w={`calc(${widthImage}% - 20px)`}
             h={{
-              base: 'calc(40vh - 20px)',
-              md: 'calc(50vh - 20px)',
-              lg: 'calc(80vh - 20px)',
+              base: `calc(${heightImageBase}vh - 20px)`,
+              md: `calc(${heightImageMd}vh - 20px)`,
+              lg: `calc(${heightImage}vh - 20px)`,
             }}
             borderRadius={20}
             zIndex={3}
             position="absolute"
-            top={'10px'}
-            left={'10px'}
+            transform={'translate(-50%,-50%'}
+            top={'50%'}
+            left={'50%'}
           ></Box>
           <Box
             bg={'#ffffff20'}
             backdropFilter={'blur(10px)'}
-            w={'100%'}
+            w={`calc(${widthImage}%)`}
             h={{
-              base: '40vh',
-              md: '50vh',
-              lg: '80vh ',
+              base: `${heightImageBase}vh`,
+              md: `${heightImageMd}vh`,
+              lg: `${heightImage}vh`,
             }}
             borderRadius={20}
             position="absolute"
-            top={0}
-            left={0}
+            transform={'translate(-50%,-50%'}
+            top={'50%'}
+            left={'50%'}
             zIndex={2}
             mixBlendMode="overlay"
           ></Box>

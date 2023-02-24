@@ -1,6 +1,10 @@
+import {colorsDD} from '../../../ui/colors/colors'
+
 const projetsdata = [
   {
     id: 1,
+    color1: '#398ffc',
+    color2: 'white',
     title: 'Teachizi',
     description:
       "j'ai developpé la marketplace teachizi.fr dans le but d'obtenir un espace utilisateur eleve et professeur, possibilité de réserver et payer le cours d'un prof",
@@ -9,6 +13,8 @@ const projetsdata = [
   },
   {
     id: 2,
+    color1: 'red',
+    color2: colorsDD.green,
     title: 'LaTeamV2',
     description:
       "J'ai contribué à l'amélioration de lateamV2, je me suis principalement occupé de divers problème ui/ux, appels API avec react Query",
@@ -17,6 +23,8 @@ const projetsdata = [
   },
   {
     id: 3,
+    color1: '#0640af',
+    color2: '#398ffc',
     title: 'Formizi',
     description:
       "J'ai developpé Formizi qui est une lxp offrant une experience de formation digital innovante.",
@@ -25,6 +33,8 @@ const projetsdata = [
   },
   {
     id: 4,
+    color1: '#398ffc',
+    color2: 'white',
     title: 'Teachizi',
     description:
       "j'ai developpé la marketplace teachizi.fr dans le but d'obtenir un espace utilisateur eleve et professeur, possibilité de réserver et payer le cours d'un prof",
@@ -33,6 +43,8 @@ const projetsdata = [
   },
   {
     id: 5,
+    color1: 'red',
+    color2: colorsDD.green,
     title: 'LaTeamV2',
     description:
       "J'ai contribué à l'amélioration de lateamV2, je me suis principalement occupé de divers problème ui/ux, appels API avec react Query",
@@ -41,6 +53,8 @@ const projetsdata = [
   },
   {
     id: 6,
+    color1: '#0640af',
+    color2: '#398ffc',
     title: 'Formizi',
     description:
       "J'ai developpé Formizi qui est une lxp offrant une experience de formation digital innovante.",
@@ -49,6 +63,8 @@ const projetsdata = [
   },
   {
     id: 7,
+    color1: '#398ffc',
+    color2: 'white',
     title: 'Teachizi',
     description:
       "j'ai developpé la marketplace teachizi.fr dans le but d'obtenir un espace utilisateur eleve et professeur, possibilité de réserver et payer le cours d'un prof",
@@ -57,6 +73,8 @@ const projetsdata = [
   },
   {
     id: 8,
+    color1: 'red',
+    color2: colorsDD.green,
     title: 'LaTeamV2',
     description:
       "J'ai contribué à l'amélioration de lateamV2, je me suis principalement occupé de divers problème ui/ux, appels API avec react Query",
@@ -65,6 +83,8 @@ const projetsdata = [
   },
   {
     id: 9,
+    color1: '#0640af',
+    color2: '#398ffc',
     title: 'Formizi',
     description:
       "J'ai developpé Formizi qui est une lxp offrant une experience de formation digital innovante.",

@@ -2,6 +2,7 @@ import {useContext, useEffect, useState} from 'react'
 import {motion} from 'framer-motion'
 import {CursorContext} from './CursorProvider'
 import {colorsDD} from '../colors/colors'
+import './cursor.css'
 
 export default function Cursor() {
   const [cursorData, setCursorData] = useContext(CursorContext)
@@ -113,6 +114,7 @@ export default function Cursor() {
       className="cursor"
       variants={variants}
       animate={cursorData.variant}
+      id="customCursor"
     >
       <span
         style={{

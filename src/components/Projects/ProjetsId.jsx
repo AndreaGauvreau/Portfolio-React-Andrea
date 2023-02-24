@@ -9,6 +9,7 @@ import Cursor from '../ui/cursor/Cursor'
 import {CursorContext} from '../ui/cursor/CursorProvider'
 import './gradient.css'
 import {motion} from 'framer-motion' // Importer motion de framer-motion
+import ImageProject from './ImageProject'
 
 export default function ProjetsId() {
   const {id} = useParams()
@@ -36,7 +37,7 @@ export default function ProjetsId() {
       id="backgroundGradient"
       w={'100%'}
       padding={3}
-      background={`linear-gradient(-45deg, ${colorsDD.pink}, ${colorsDD.green},${colorsDD.pink}, ${colorsDD.green})`}
+      background={`linear-gradient(-45deg, ${projet.color1}, ${projet.color2},${projet.color1}, ${projet.color2})`}
       maxH={'100vh'}
     >
       <Flex
@@ -57,21 +58,21 @@ export default function ProjetsId() {
           minH={'100vh'}
           flexDirection={'column'}
           justifyContent={'center'}
-          alignItems={'flex-start'}
+          alignItems={'center'}
           gap={5}
         >
           <Link
-            to={`/`}
+            to={'/#projets'}
             onMouseLeave={handleMouseLeave}
             onMouseEnter={handleMouseClick}
           >
             <Button
-              bgColor={colorsDD.pink20}
-              color={colorsDD.pink}
+              bgColor={projet.color1}
+              color={'white'}
               leftIcon={<ArrowBackIcon />}
               cursor={'none'}
             >
-              ok
+              retour
             </Button>
           </Link>
           <motion.div // Encapsuler les éléments dans une div avec motion pour ajouter l'animation
@@ -92,13 +93,11 @@ export default function ProjetsId() {
             animate={{opacity: 1, y: 0}}
             transition={{delay: 0.4, duration: 0.5}}
           >
-            <Text
-              color={'white'}
-              display={{base: 'none', md: 'flex', lg: 'flex'}}
-            >
+            <Text color={'white'} display="flex">
               {projet.description}
-            </Text>{' '}
+            </Text>
           </motion.div>
+          <ImageProject image={projet.image} />
         </Flex>
         <p>{projet.categories.join(', ')}</p>
         <Image src={projet.image} alt={projet.title} />

@@ -27,6 +27,8 @@ export default function Cursor() {
 
   const variants = {
     default: {
+      height: 0,
+      width: 0,
       background: '#ffffff',
       x: cursorData.position.x - 16,
       y: cursorData.position.y - 16,
@@ -75,28 +77,28 @@ export default function Cursor() {
         variant: 'text',
         orientation: 0,
       }))
-      document.body.style.cursor = 'none'
+      document.body.classList.remove('show-cursor')
     } else if (cursorData.mouseEnter === 'Sm') {
       setCursorData(prevState => ({
         ...prevState,
         variant: 'pos',
         orientation: 0,
       }))
-      document.body.style.cursor = 'none'
+      document.body.classList.remove('show-cursor')
     } else if (cursorData.mouseEnter === 'SmFull') {
       setCursorData(prevState => ({
         ...prevState,
         variant: 'SmFull',
         orientation: 0,
       }))
-      document.body.style.cursor = 'none'
+      document.body.classList.remove('show-cursor')
     } else if (cursorData.mouseEnter === 'SmP') {
       setCursorData(prevState => ({
         ...prevState,
         variant: 'SmP',
         orientation: 0,
       }))
-      document.body.style.cursor = 'none'
+      document.body.classList.remove('show-cursor')
     } else {
       setCursorData(prevState => ({
         ...prevState,
@@ -104,7 +106,7 @@ export default function Cursor() {
         text: '',
         orientation: 90,
       }))
-      document.body.style.cursor = 'auto'
+      document.body.classList.add('show-cursor')
     }
     setTextCursor(cursorData.mouseText)
   }, [cursorData.mouseEnter, cursorData.mouseText, setCursorData])

@@ -3,9 +3,10 @@ import React from 'react'
 
 export default function ImageProject({image, scale}) {
   const widthImage = 100 * scale
+  const widthImageBase = 100
   const heightImage = 80 * scale
-  const heightImageBase = 40 * scale
-  const heightImageMd = 50 * scale
+  const heightImageBase = 40
+  const heightImageMd = 50
   return (
     <>
       <Flex justifyContent={'center'} alignItems={'center'} w={'100vw'}>
@@ -19,7 +20,11 @@ export default function ImageProject({image, scale}) {
             backgroundImage={`url(${image})`}
             backgroundSize={'cover'}
             backgroundPosition={'center'}
-            w={`calc(${widthImage}% - 20px)`}
+            w={{
+              base: `calc(${widthImageBase}% - 20px)`,
+              md: `calc(${widthImageBase}% - 20px)`,
+              lg: `calc(${widthImage}% - 20px)`,
+            }}
             h={{
               base: `calc(${heightImageBase}vh - 20px)`,
               md: `calc(${heightImageMd}vh - 20px)`,
@@ -38,7 +43,11 @@ export default function ImageProject({image, scale}) {
             backgroundImage={`url(${image})`}
             backgroundSize={'cover'}
             backgroundPosition={'center'}
-            w={`calc(${widthImage}% - 20px)`}
+            w={{
+              base: `calc(${widthImageBase}% - 20px)`,
+              md: `calc(${widthImageBase}% - 20px)`,
+              lg: `calc(${widthImage}% - 20px)`,
+            }}
             h={{
               base: `calc(${heightImageBase}vh - 20px)`,
               md: `calc(${heightImageMd}vh - 20px)`,
@@ -57,7 +66,11 @@ export default function ImageProject({image, scale}) {
             backgroundImage={`url(${image})`}
             backgroundSize={'cover'}
             backgroundPosition={'center'}
-            w={`calc(${widthImage}% - 20px)`}
+            w={{
+              base: `calc(${widthImageBase}% - 20px)`,
+              md: `calc(${widthImageBase}% - 20px)`,
+              lg: `calc(${widthImage}% - 20px)`,
+            }}
             h={{
               base: `calc(${heightImageBase}vh - 20px)`,
               md: `calc(${heightImageMd}vh - 20px)`,
@@ -73,7 +86,11 @@ export default function ImageProject({image, scale}) {
           <Box
             bg={'#ffffff20'}
             backdropFilter={'blur(10px)'}
-            w={`calc(${widthImage}%)`}
+            w={{
+              base: `calc(${widthImageBase}% )`,
+              md: `calc(${widthImageBase}% )`,
+              lg: `calc(${widthImage}% )`,
+            }}
             h={{
               base: `${heightImageBase}vh`,
               md: `${heightImageMd}vh`,

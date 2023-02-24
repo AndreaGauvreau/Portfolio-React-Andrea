@@ -10,6 +10,7 @@ import {CursorContext} from '../ui/cursor/CursorProvider'
 import './gradient.css'
 import {motion} from 'framer-motion' // Importer motion de framer-motion
 import ImageProject from './ImageProject'
+import Gradient from '../ui/GradientBgElems/Gradient'
 
 export default function ProjetsId() {
   const {id} = useParams()
@@ -84,14 +85,15 @@ export default function ProjetsId() {
       >
         <Menu color1={projet.color1} color2={projet.color2} />
         <Cursor />
-
         <Flex
           minH={'100vh'}
           flexDirection={'column'}
           justifyContent={'center'}
           alignItems={'center'}
           gap={5}
+          position="relative"
         >
+          <Gradient colorG={projet.color1} versionG={1} indexG={0} />
           <Flex
             h={{base: '50vh', md: '50vh', lg: '70vh'}}
             flexDirection={'column'}
@@ -126,6 +128,7 @@ export default function ProjetsId() {
                 variant={'dew'}
                 color={'white'}
                 fontSize={{base: '27px', md: '30px', lg: '40px'}}
+                colorBl
               >
                 {projet.title}
               </Heading>
@@ -141,6 +144,9 @@ export default function ProjetsId() {
                 pl={5}
                 pr={5}
                 textAlign="center"
+                w={'70%'}
+                ml={'auto'}
+                mr={'auto'}
               >
                 {projet.description}
               </Text>

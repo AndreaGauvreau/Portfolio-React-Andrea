@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <Box bgColor="#0d0d12" padding={0} m={0} w={'100%'} overflow={'hidden'}>
         <Cursor />
-        <Menu />
+        <Menu blur={7} />
         <Main />
         <Competences />
         <Parcours />

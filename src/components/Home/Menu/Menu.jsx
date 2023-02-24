@@ -1,4 +1,4 @@
-import {Flex, IconButton, Image} from '@chakra-ui/react'
+import {Box, Flex, IconButton, Image} from '@chakra-ui/react'
 import React, {useState} from 'react'
 import {colorsDD} from '../../ui/colors/colors'
 import {DribbleIcon} from '../../ui/icones/dribbleIcon/dribbleicon'
@@ -7,7 +7,7 @@ import {IconeAndrea} from '../../ui/icones/iconeandrea/iconeandrea'
 import {LinkdinIcon} from '../../ui/icones/linkedin/linkedinIcon'
 import {LogoAndrea} from '../../ui/icones/logoandrea/logoandrea'
 
-export default function Menu({color1, color2}) {
+export default function Menu({color1, color2, blur}) {
   const [githubColor, setGithubColor] = useState('#ffffff50')
   const [linkedinColor, setLinkdedinColor] = useState('#ffffff50')
   const [dribbleColor, setDribbleColor] = useState('#ffffff50')
@@ -16,18 +16,26 @@ export default function Menu({color1, color2}) {
       pl={{base: 10, md: 5, lg: 10}}
       pr={{base: 10, md: 5, lg: 10}}
       pt={{base: 4, md: 4, lg: 4}}
-      pb={{base: 4, md: 5, lg: 10}}
+      pb={{base: 4, md: 5, lg: 5}}
       justifyContent={'space-between'}
       position={'fixed'}
       w={'100vw'}
       zIndex={20}
+      bg={'#ffffff00'}
+      backdropFilter={{
+        base: `blur(${blur}px)`,
+        md: 'blur(0px)',
+        lg: 'blur(0px)',
+      }}
     >
-      <LogoAndrea
-        width={'150px'}
-        color1={color1 ? color1 : colorsDD.pink}
-        color2={color2 ? color2 : colorsDD.green}
-        color={'white'}
-      />
+      <Box w={{base: '100px', md: '90px', lg: '150px'}}>
+        <LogoAndrea
+          width={'100%'}
+          color1={color1 ? color1 : colorsDD.pink}
+          color2={color2 ? color2 : colorsDD.green}
+          color={'white'}
+        />
+      </Box>
       <Flex gap={{base: 2, md: 5, lg: 10}} alignItems={'center'}>
         <IconButton
           aria-label="github link"
@@ -42,7 +50,7 @@ export default function Menu({color1, color2}) {
               color={githubColor}
               color1={color1 ? color1 : colorsDD.pink}
               color2={color2 ? color2 : colorsDD.green}
-              width={{base: '20px', md: '30px', lg: '40px'}}
+              width={'100%'}
             />
           }
         />
@@ -59,7 +67,7 @@ export default function Menu({color1, color2}) {
               color={linkedinColor}
               color1={color1 ? color1 : colorsDD.pink}
               color2={color2 ? color2 : colorsDD.green}
-              width={{base: '20px', md: '30px', lg: '40px'}}
+              width={'100%'}
             />
           }
         />
@@ -76,7 +84,7 @@ export default function Menu({color1, color2}) {
               color={dribbleColor}
               color1={color1 ? color1 : colorsDD.pink}
               color2={color2 ? color2 : colorsDD.green}
-              width={{base: '20px', md: '30px', lg: '40px'}}
+              width={'100%'}
             />
           }
         />

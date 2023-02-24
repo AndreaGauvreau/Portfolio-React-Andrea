@@ -95,7 +95,7 @@ export default function Cards({datas, currentIndex, length}) {
     setCursorData(prevState => ({
       ...prevState,
       mouseEnter: 'Lg',
-      mouseText: '🫵',
+      mouseText: '👆',
     }))
   }
 
@@ -136,6 +136,7 @@ export default function Cards({datas, currentIndex, length}) {
               onMouseEnter={handleMouseClick}
               onMouseLeave={handleMouseLeave}
               onClick={handleMouseLeave}
+              cursor={'none'}
             />
           </Link>
           <Stack mt="6" spacing="3">

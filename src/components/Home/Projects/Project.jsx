@@ -34,7 +34,7 @@ export default function Project() {
       <Flex
         w={{base: '100%', md: '100%', lg: '1024px'}}
         flexDirection={{base: 'column', md: 'column', lg: 'column'}}
-        gap={0}
+        gap={{base: 5, md: 0, lg: 0}}
       >
         <Gradient colorG={colorsDD.pink} versionG={1} />
         <Heading

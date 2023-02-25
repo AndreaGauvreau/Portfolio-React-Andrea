@@ -1,5 +1,14 @@
 import {ArrowBackIcon, ArrowDownIcon} from '@chakra-ui/icons'
-import {Badge, Box, Button, Flex, Heading, Image, Text} from '@chakra-ui/react'
+import {
+  Badge,
+  Box,
+  Button,
+  calc,
+  Flex,
+  Heading,
+  Image,
+  Text,
+} from '@chakra-ui/react'
 import React, {useContext, useEffect, useRef, useState} from 'react'
 import {Link, useLocation, useParams} from 'react-router-dom'
 import Menu from '../Home/Menu/Menu'
@@ -11,6 +20,8 @@ import './gradient.css'
 import {motion} from 'framer-motion' // Importer motion de framer-motion
 import ImageProject from './ImageProject'
 import Gradient from '../ui/GradientBgElems/Gradient'
+import ButtonDD from '../ui/ButtonDD/ButtonDD'
+import Canvas3d from '../Home/Main/3drocket/Canva'
 
 export default function ProjetsId() {
   const {id} = useParams()
@@ -75,9 +86,9 @@ export default function ProjetsId() {
     <Box
       id="backgroundGradient"
       w={'100%'}
-      padding={3}
+      padding={2}
       background={`linear-gradient(-45deg, ${projet.color1}, ${projet.color2},${projet.color1}, ${projet.color2})`}
-      mawH={'100vh'}
+      maxH={'100vh'}
     >
       <Menu color1={projet.color1} color2={projet.color2} blur={0} />
       <Flex
@@ -87,7 +98,7 @@ export default function ProjetsId() {
         w={'100%'}
         flexDirection={'column'}
         alignItems={'center'}
-        maxH={'calc(100vh - 23px)'}
+        maxH={'calc(100vh - 15px)'}
         borderRadius={20}
         overflow={'scroll'}
         overflowX={'hidden'}
@@ -148,7 +159,7 @@ export default function ProjetsId() {
                 </Button>
               </Link>
             </Flex>
-            <motion.div // Encapsuler les éléments dans une div avec motion pour ajouter l'animation
+            <motion.div
               initial={{opacity: 0, y: 30}}
               animate={{opacity: 1, y: 0}}
               transition={{delay: 0.3, duration: 0.5}}
@@ -162,7 +173,7 @@ export default function ProjetsId() {
                 {projet.title}
               </Heading>
             </motion.div>
-            <motion.div // Encapsuler les éléments dans une div avec motion pour ajouter l'animation
+            <motion.div
               initial={{opacity: 0, y: 30}}
               animate={{opacity: 1, y: 0}}
               transition={{delay: 0.4, duration: 0.5}}
@@ -184,12 +195,13 @@ export default function ProjetsId() {
           <ImageProject image={projet.image} scale={scaleValue} />
         </Flex>
         <Flex
-          minH={'20vh'}
+          minH={{base: '0px', md: '100px', lg: '100px'}}
           w={'100vw'}
           flexDirection={'row'}
           justifyContent="center"
           gap={2}
-          alignItems={'center'}
+          alignItems={'flex-end'}
+          mt={5}
         >
           {projet.categories.map((e, index) => {
             return (
@@ -208,20 +220,64 @@ export default function ProjetsId() {
           })}
         </Flex>
         <Flex
+          mt={{base: '30px', md: '40px', lg: '40px'}}
           minH={'100vh'}
-          w={'100vw'}
-          flexDirection={'row'}
-          justifyContent="center"
-          alignItems={'center'}
-          gap={20}
+          flexWrap={'wrap'}
+          w={{base: '90%', md: '90%', lg: '500px'}}
+          position="relative"
+          gap={'10px'}
+          alignContent="flex-start"
+          justifyContent={'center'}
         >
-          {projet.categories.map((e, index) => {
-            return (
-              <Badge variant="subtle" key={index} p={20}>
-                {e}
-              </Badge>
-            )
-          })}
+          <Gradient colorG={projet.color2} />
+          <Flex
+            w={'calc(50% - 5px)'}
+            bg={projet.color2}
+            minH={'200px'}
+            p={5}
+            borderRadius={10}
+            alignItems={'flex-start'}
+            flexDirection={'column'}
+            gap={5}
+          >
+            <Badge bg={'#00000030'} color={'black'} p={1} borderRadius={5}>
+              avis client
+            </Badge>
+            <Text color={'black'}>{projet.comment}</Text>
+            <Flex>
+              <Box color={'black'}>
+                <Text fontWeight="bold">{projet.projectOwner}</Text>
+                <Text fontSize="sm">Project Owner</Text>
+              </Box>
+            </Flex>
+          </Flex>
+          <Flex
+            w={'calc(50% - 5px)'}
+            bg={projet.color1}
+            minH={'200px'}
+            p={5}
+            borderRadius={10}
+            justifyContent={'center'}
+            alignItems={'center'}
+          >
+            <Image src={projet.logo} w={'70%'} h={'auto'} />
+          </Flex>
+          <Flex
+            w={'100%'}
+            bg={projet.color1}
+            minH={'200px'}
+            p={5}
+            borderRadius={10}
+          >
+            <Text color={'white'}>{projet.contribution}</Text>
+          </Flex>
+          <Box mt={20}>
+            <ButtonDD
+              text={'Contactez-moi 🚀'}
+              colorButton={projet.color1}
+              colorThemeDD={'custom'}
+            />
+          </Box>
         </Flex>
       </Flex>
     </Box>

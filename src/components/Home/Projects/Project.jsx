@@ -30,6 +30,7 @@ export default function Project() {
       id={'projets'}
       className={'projets'}
       ref={projetsRef}
+      bg={'linear-gradient(180deg, #ffffff05, #ffffff00)'}
     >
       <Flex
         w={{base: '100%', md: '100%', lg: '1024px'}}

@@ -14,6 +14,9 @@ const projetsdata = [
       "j'ai developpé la marketplace teachizi.fr dans le but d'obtenir un espace utilisateur eleve et professeur, possibilité de réserver et payer le cours d'un prof",
     categories: ['CMS', 'Marketplace', 'Mangopay'],
     image: '/images/teachizi.fr-portfolio-andrea-gauvreau.jpg',
+    projectOwner: 'Mathis Thomas',
+    comment: "Notre projet à vu le jour grâce au travail d'andréa",
+    logo: '/images/logo-teachizi-blanc-450x102.png',
   },
   {
     id: 2,
@@ -24,10 +27,12 @@ const projetsdata = [
     dateEnd: 'Mars 2023',
     description:
       "la Team V2 est une plateforme de gesttion de formation et d'équipe",
-    contribution:
-      "J'ai contribué à l'amélioration de lateamV2, je me suis principalement occupé de divers problème ui/ux, appels API avec react Query",
+    contribution: `J'ai contribué à l'amélioration de lateamV2, je me suis principalement occupé de divers problème ui/ux, appels API avec react Query. J'ai eu la chance d'être épaulé par un developpeur senior tout au long de cette mission ce qui a grandement augmenté mes compétences de developpeur`,
     categories: ['React', 'React Query', 'Chakra Ui'],
     image: '/images/schoolbooster.jpg',
+    projectOwner: 'Mathis Thomas',
+    comment: "Notre projet à vu le jour grâce au travail d'andréa",
+    logo: '/images/logo-teachizi-blanc-450x102.png',
   },
   {
     id: 3,
@@ -42,6 +47,10 @@ const projetsdata = [
       "J'ai developpé Formizi qui est une lxp offrant une experience de formation digital innovante.",
     categories: ['CMS', 'LXP', 'LMS'],
     image: '/images/formizi-portfolio.jpg',
+    projectOwner: 'Hadrien Loridon',
+    comment:
+      "Les organismes de formations sont satisfaits de l'experience utilisateur de la plateforme",
+    logo: '/images/Formizi-Logo-Blanc.png',
   },
   {
     id: 4,
@@ -56,6 +65,9 @@ const projetsdata = [
       "j'ai developpé la marketplace teachizi.fr dans le but d'obtenir un espace utilisateur eleve et professeur, possibilité de réserver et payer le cours d'un prof",
     categories: ['CMS', 'Marketplace', 'Mangopay'],
     image: '/images/teachizi.fr-portfolio-andrea-gauvreau.jpg',
+    projectOwner: 'Mathis Thomas',
+    comment: "Notre projet à vu le jour grâce au travail d'andréa",
+    logo: '/images/logo-teachizi-blanc-450x102.png',
   },
   {
     id: 5,
@@ -67,9 +79,12 @@ const projetsdata = [
     description:
       "la Team V2 est une plateforme de gesttion de formation et d'équipe",
     contribution:
-      "J'ai contribué à l'amélioration de lateamV2, je me suis principalement occupé de divers problème ui/ux, appels API avec react Query",
+      "J'ai contribué à l'amélioration de lateamV2, je me suis principalement occupé de divers problème ui/ux, appels API avec react Query. J'ai eu la chance d'être épaulé par un developpeur senior tout au long de cette mission ce qui a grandement augmenté mes compétences de developpeur",
     categories: ['React', 'React Query', 'Chakra Ui'],
     image: '/images/schoolbooster.jpg',
+    projectOwner: 'Mathis Thomas',
+    comment: "Notre projet à vu le jour grâce au travail d'andréa",
+    logo: '/images/logo-teachizi-blanc-450x102.png',
   },
   {
     id: 6,
@@ -84,6 +99,10 @@ const projetsdata = [
       "J'ai developpé Formizi qui est une lxp offrant une experience de formation digital innovante.",
     categories: ['CMS', 'LXP', 'LMS'],
     image: '/images/formizi-portfolio.jpg',
+    projectOwner: 'Hadrien Loridon',
+    comment:
+      "Les organismes de formations sont satisfaits de l'experience utilisateur de la plateforme",
+    logo: '/images/Formizi-Logo-Blanc.png',
   },
   {
     id: 7,
@@ -98,6 +117,9 @@ const projetsdata = [
       "j'ai developpé la marketplace teachizi.fr dans le but d'obtenir un espace utilisateur eleve et professeur, possibilité de réserver et payer le cours d'un prof",
     categories: ['CMS', 'Marketplace', 'Mangopay'],
     image: '/images/teachizi.fr-portfolio-andrea-gauvreau.jpg',
+    projectOwner: 'Mathis Thomas',
+    comment: "Notre projet à vu le jour grâce au travail d'andréa",
+    logo: '/images/logo-teachizi-blanc-450x102.png',
   },
   {
     id: 8,
@@ -109,9 +131,12 @@ const projetsdata = [
     description:
       "la Team V2 est une plateforme de gesttion de formation et d'équipe",
     contribution:
-      "J'ai contribué à l'amélioration de lateamV2, je me suis principalement occupé de divers problème ui/ux, appels API avec react Query",
+      "J'ai contribué à l'amélioration de lateamV2, je me suis principalement occupé de divers problème ui/ux, appels API avec react Query. J'ai eu la chance d'être épaulé par un developpeur senior tout au long de cette mission ce qui a grandement augmenté mes compétences de developpeur",
     categories: ['React', 'React Query', 'Chakra Ui'],
     image: '/images/schoolbooster.jpg',
+    projectOwner: 'Mathis Thomas',
+    comment: "Notre projet à vu le jour grâce au travail d'andréa",
+    logo: '/images/logo-teachizi-blanc-450x102.png',
   },
   {
     id: 9,
@@ -126,6 +151,10 @@ const projetsdata = [
       "J'ai developpé Formizi qui est une lxp offrant une experience de formation digital innovante.",
     categories: ['CMS', 'LXP', 'LMS'],
     image: '/images/formizi-portfolio.jpg',
+    projectOwner: 'Hadrien Loridon',
+    comment:
+      "Les organismes de formations sont satisfaits de l'experience utilisateur de la plateforme",
+    logo: '/images/Formizi-Logo-Blanc.png',
   },
 ]
 

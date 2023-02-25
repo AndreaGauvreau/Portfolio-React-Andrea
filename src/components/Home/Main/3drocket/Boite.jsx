@@ -1,8 +1,8 @@
 import {useTexture, useGLTF, Float} from '@react-three/drei'
 import {Bloom, EffectComposer} from '@react-three/postprocessing'
 export default function Boite() {
-  const {nodes} = useGLTF('./model/box.glb')
-  const bakedTexture = useTexture('./model/box.jpg')
+  const {nodes} = useGLTF('/model/box.glb')
+  const bakedTexture = useTexture('/model/box.jpg')
   bakedTexture.flipY = false
 
   return (

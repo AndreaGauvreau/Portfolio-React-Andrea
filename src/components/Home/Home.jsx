@@ -16,8 +16,8 @@ export default function Home() {
         <Menu blur={7} />
         <Main />
         <Competences />
-        <Parcours />
         <Project />
+        <Parcours />
         <Contact />
       </Box>
     </>
